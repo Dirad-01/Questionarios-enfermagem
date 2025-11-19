@@ -21,7 +21,7 @@ const modelos = {
   contrasteExterno: {
     titulo: "Contraste Externo",
     texto: `
-Paciente externo realizou questionário e anamnese em anexo. Realizo punção de acesso venoso periférico na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Realizo teste de contraste via venosa: Tipo _____, Volume administrado: _____ amp, em BIC com válvula anti-refluxo, conforme protocolo, sem intercorrências.
+Paciente externo realizou questionário e anamnese em anexo. Realizo punção de acesso venoso periférico na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Realizo teste de contraste via venosa: Tipo _____, Volume administrado: _____ ml, em BIC com válvula anti-refluxo, conforme protocolo, sem intercorrências.
 Paciente liberado para domicílio em ar ambiente, orientado, nega dor, acompanhado por familiares. Orientações pós contraste fornecidas.
 `,
     campos: ["number", "membro", "Calibre", "TipoTCRM", "number"]
@@ -31,7 +31,7 @@ Paciente liberado para domicílio em ar ambiente, orientado, nega dor, acompanha
     titulo: "Contraste Emergencia",
     texto: `
 Paciente proveniente da emergência com punção no membro: _____ Calibre do cateter: _____ G, realizo teste de infusão pré exame, conforme protocolo. 
-Administrado Contraste via venosa: Tipo _____ Volume administrado: _____ amp, em BIC com válvula anti-refluxo, conforme protocolo, sem intercorrências.
+Administrado Contraste via venosa: Tipo _____ Volume administrado: _____ ml, em BIC com válvula anti-refluxo, conforme protocolo, sem intercorrências.
 Encaminho paciente para setor de origem em cadeira de rodas, em ambiente, orientado, nega dor, acompanhado por familiares, enfermagem, oriento pós contraste.
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number"]
@@ -41,7 +41,7 @@ Encaminho paciente para setor de origem em cadeira de rodas, em ambiente, orient
     titulo: "Contraste Interno",
     texto: `
 Recebo paciente com acesso venoso prévio. Membro puncionado: _____. Calibre do cateter: _____ G. Realizo teste de infusão pré exame conforme protocolo.
-Administrado contraste via venosa: Tipo _____, Volume administrado: _____ amp em BIC com válvula anti-refluxo, sem intercorrências.
+Administrado contraste via venosa: Tipo _____, Volume administrado: _____ ml em BIC com válvula anti-refluxo, sem intercorrências.
 Paciente encaminhado ao setor de origem em ar ambiente, orientado, nega dor, acompanhado por familiares. Orientações pós contraste fornecidas.
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number"]
@@ -74,7 +74,7 @@ Paciente admitido no setor para tomografia computadorizada coronariana.
 Realizada orientação prévia quanto ao procedimento, posicionamento e necessidade de colaboração em apneias. Realizo questionário e anamnese em anexo.
 Realizo punção de acesso venoso periférico na _____ tentativa, membro puncionado: _____. Calibre do cateter: 18G. Teste de infusão realizado conforme protocolo.
 Sinais vitais monitorizados antes e após o exame, estáveis. Medicação administrada conforme prescrição.
-Acesso com bom fluxo, utilizado para infusão do meio iodado: Tipo _____, Volume administrado: _____ amp, em BIC com válvula anti-refluxo, sem intercorrências.
+Acesso com bom fluxo, utilizado para infusão do meio iodado: Tipo _____, Volume administrado: _____ ml, em BIC com válvula anti-refluxo, sem intercorrências.
 Paciente colaborativo, tolerou bem o procedimento, encaminhado em cadeira de rodas, orientado, sinais vitais normais.
 `,
     campos: ["number", "membro", "TipoTCRM", "number"]
@@ -84,7 +84,7 @@ Paciente colaborativo, tolerou bem o procedimento, encaminhado em cadeira de rod
     titulo: "Extravasamento Externo",
     texto: `
 Paciente externo realizou questionário e anamnese em anexo. Punção realizada na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Teste de infusão pré exame conforme protocolo.
-Durante administração de contraste: Tipo _____, Volume administrado: _____ amp, apresentou extravasamento.
+Durante administração de contraste: Tipo _____, Volume administrado: _____ ml, apresentou extravasamento.
 Realizado scalt, retirada imediata do acesso, compressa fria aplicada e elevação do membro. Paciente referindo _____. Cuidados realizados: _____. Encaminhado para avaliação médica ou vascular conforme protocolo.
 Conduta: compressa fria intermitente, vigilância do membro, orientar retorno se dor intensa, edema progressivo ou alteração de perfusão.
 Paciente orientado, compreensivo, evoluindo estável. Liberado para domicílio acompanhado. Notificação preenchida.
@@ -96,7 +96,7 @@ Paciente orientado, compreensivo, evoluindo estável. Liberado para domicílio a
     titulo: "Extravasamento Interno",
     texto: `
 Paciente interno com acesso venoso prévio funcional. Membro puncionado: _____. Calibre do cateter: _____ G.
-Durante administração de contraste: Tipo _____, Volume administrado: _____ amp, apresentou extravasamento.
+Durante administração de contraste: Tipo _____, Volume administrado: _____ ml, apresentou extravasamento.
 Realizado scalt, retirada imediata do acesso, compressa fria local aplicada e elevação do membro. Paciente referindo _____. Cuidados realizados: _____. Encaminhado para avaliação médica ou vascular conforme protocolo.
 Conduta: compressa fria intermitente, vigilância do membro, retorno imediato em caso de dor intensa, edema ou alteração de perfusão.
 Paciente orientado e estável, retornando ao setor. Notificação preenchida.
@@ -129,7 +129,7 @@ Paciente externo vem para realizar exame sem contraste. Posicionado conforme pro
 
 window.addEventListener("DOMContentLoaded", () => {
   const lista = document.getElementById("modelList");
-  lista.innerHTamp = "";
+  lista.innerHTML = "";
 
   Object.keys(modelos).forEach(key => {
     const item = document.createElement("button");
@@ -182,7 +182,7 @@ function abrirModelo(key) {
     }
   });
 
-  box.innerHTamp = "";
+  box.innerHTML = "";
   box.appendChild(frag);
 
   box.classList.remove("hidden");
@@ -295,4 +295,3 @@ async function copyText() {
 
   setTimeout(() => banner.remove(), 1500);
 }
-
