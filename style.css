@@ -1,0 +1,218 @@
+/* Fonte estilo Aptos Corpo (Inter ajustada) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #e7d8a1;
+  --sidebar-bg: #fdf9c7;
+  --text: #4c3711;
+  --primary: #7a551f;
+  --primary-dark: #614319;
+  --border: #c0aa78;
+  --border-light: #e7d5a4;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow-strong: rgba(0, 0, 0, 0.16);
+  --radius: 14px;
+  --font: "Inter", system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ======== BODY ======== */
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ======== LAYOUT ======== */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ======== SIDEBAR ======== */
+.sidebar {
+  width: 290px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  padding: 25px;
+  box-shadow: 4px 0 12px var(--shadow);
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+
+#modelList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ======== BOTÕES DE MODELO ======== */
+.model-item {
+  padding: 14px 18px;
+  background: #fffce5;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+  color: var(--text);
+  transition: 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.model-item:hover {
+  background: #f6eec4;
+  transform: translateX(4px);
+}
+
+.model-item.active {
+  background: var(--primary);
+  color: white;
+}
+
+/* ======== ÁREA DE CONTEÚDO ======== */
+.content-area {
+  flex: 1;
+  padding: 40px;
+}
+
+.content-area h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: var(--text);
+  letter-spacing: 0.4px;
+}
+
+/* ======== CAIXA DO TEXTO ======== */
+.textBox {
+  background: var(--sidebar-bg);
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 14px var(--shadow);
+  font-size: 18px;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  white-space: pre-wrap;
+  color: var(--text);
+}
+
+/* ======== INPUTS INLINE ======== */
+.textBox .fillField {
+  display: inline-block;
+  padding: 4px 6px;
+  font-size: 15px;
+  width: 100px !important;
+  max-width: 100px !important;
+  min-width: 100px !important;
+  height: 30px;
+
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fffde8;
+  color: var(--text);
+  margin: 0 4px;
+  transition: 0.15s ease;
+}
+
+.textBox .fillField[type="number"] {
+  width: 65px !important;
+  min-width: 65px !important;
+  max-width: 65px !important;
+  text-align: center;
+}
+
+.textBox .fillField:focus {
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(122, 85, 31, 0.25);
+  outline: none;
+}
+
+.textBox span {
+  padding: 2px 4px;
+  background: #fff4c2;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #5a4213;
+}
+
+/* ======== LISTA DE SUGESTÕES (ATUALIZADO) ======== */
+.suggestBox {
+  position: absolute;
+  background: #ffffff;              /* branco — destaque */
+  border-radius: 12px;
+  border: 1px solid #bbb7a3;
+  padding: 4px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  z-index: 9999;
+}
+
+/* Agora menor e com cor destacada */
+.suggestItem {
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;                  /* tamanho reduzido */
+  font-weight: 500;
+  color: #3a3a3a;                   /* cinza forte — destaque */
+  letter-spacing: 0.2px;
+  transition: 0.15s ease;
+}
+
+/* Hover azul para destacar */
+.suggestItem:hover,
+.suggestItem.highlight {
+  background: #e6f0ff;              /* azul claro */
+  color: #1a3d7a;                   /* azul escuro */
+}
+
+/* ======== BOTÃO COPIAR ======== */
+.copyBtn {
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 18px rgba(122, 85, 31, 0.35);
+  transition: 0.2s ease;
+}
+
+.copyBtn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ======== BANNER “COPIADO” ======== */
+.copyBanner {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: var(--primary);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* ======== HIDDEN ======== */
+.hidden {
+  display: none;
+}
