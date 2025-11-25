@@ -10,6 +10,10 @@ const opcoes = {
   ExameCoronaria: ["Henetix", "Outro"],
   Realizados: ["Scout, elevação do membro", "Outro"],
   Calibre: ["18", "20", "22", "24"], 
+  encaminhado: ["ambulando", "maca"], 
+  acompanhado: ["familiares", "enfermagem"],
+  para: ["domicilio", "leito de internamento"],
+  
 };
 
 // =====================================================
@@ -120,7 +124,62 @@ Encaminhado ao setor/alta acompanhado por familiar.
 Paciente externo vem para realizar exame sem contraste. Posicionado conforme protocolo. Documentação anexada. Procedimento realizado sem intercorrências.
 `,
     campos: []
+  },
+
+  // =====================================================
+  // NOVOS 4 MODELOS — ADICIONADOS NO FINAL
+  // =====================================================
+
+  pelveContraste: {
+    titulo: "RM Pelve com Contraste",
+    texto: `
+Realizo protocolo de identificação do paciente conforme protocolo institucional, com checagem da pulseira e conferência de dados de segurança. Oriento sobre o exame, esclarecendo dúvidas e aplicando os questionários de triagem preconizados.
+Verifiado os sinais vitais, devidamente anotados em prontuário. Realizei punção venosa periférica com cateter calibre _____, em membro _____ , obtendo sucesso na _____tentativa. 
+Foi realizado teste de permeabilidade com 10 mL de soro fisiológico, acesso pérvio e sem sinais de intercorrências.
+Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _mL de soro via vaginal e _____ mL de soro via retal, sem queixas. Em seguida, administrei o Brometo de Escopolamina (Buscopan) conforme prescrição médica, através do acesso venoso, sem eventos adversos.
+Realizada administração do contraste Dotaren em BIC _____, com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição médica, sem sinais de extravasamento ou reações adversas. Procedimento ocorreu normalmente, sem intercorrências.
+Exame finalizado. Paciente retirado da sala em boas condições clínicas, com sinais vitais estáveis, orientado quanto aos cuidados pós-exame e liberado para domicílio.
+`,
+    campos: ["Calibre","membro","number","number","",""]
+  },
+
+  colonoVirtual: {
+    titulo: "Tomografia de Colono Virtual",
+    texto: `
+Paciente admitido no setor para realização de tomografia de colono virtual. Realizada identificação correta conforme protocolo institucional, com conferência dos dados e pulseira de identificação. Procedi às orientações referentes ao exame, esclarecendo dúvidas e reforçando as etapas do procedimento.
+Foram verificados os sinais vitais, devidamente registrados em prontuário. Em seguida, o paciente foi posicionado conforme protocolo para o exame.
+Realizei aplicação de xilocaína gel, seguida da introdução de sonda retal nº 16, com boa aceitação e sem queixas importantes. Durante todo o preparo, o paciente recebeu orientações sobre o procedimento e etapas subsequentes. Procedimento sendo conduzido pelo médico.
+Exame realizado com sucesso, sem intercorrências. Paciente permaneceu estável, sendo orientado após o término e liberado por conduta médica em boas condições gerais.
+`,
+    campos: []
+  },
+
+  entero: {
+    titulo: "Entero RM / Entero Tomo",
+    texto: `
+Paciente admitido no setor para realização de Enterografia. Realizada identificação correta conforme protocolo, com conferência dos dados de identificação e pulseira do paciente. Verifico sinais vitais.
+Iniciei o preparo do exame conforme prescrição médica: preparei a solução com laxante osmótico, utilizando _____ saches/doses diluídos em 1 litro de água mineral. Procedi às orientações ao paciente quanto à ingestão da solução, reforçando volume, ritmo e etapas conforme prescrição médica.
+Paciente realizou a ingestão da solução conforme orientado, sem queixas e sem intercorrências. Após tempo adequado, o paciente foi encaminhado e posicionado para o exame seguindo o protocolo institucional.
+Exame realizado com sucesso, sem eventos adversos. Paciente manteve-se estável, orientado após o procedimento e liberado com sinais vitais estáveis.
+`,
+    campos: ["number"]
+  },
+
+  Biopsiasedacao: {
+    titulo: "Biopsia com Sedação / Interno e externo",
+    texto: `
+Paciente admitido na sala de tomografia para realização de biópsia guiada por tomografia, conforme prescrição médica. Realizada conferência de identidade com pulseira de identificação e checagem dos dados no sistema, garantindo o cumprimento do protocolo de segurança do paciente (protocolo de identificação segura).
+Realizada triagem pré-anestésica, avaliação de jejum, alergias e uso de medicamentos conforme rotina institucional. Monitorização contínua instalada (PA não invasiva, FC, FR, SpO₂ ). Equipamentos de suporte e emergência conferidos e disponíveis na sala (ressuscitador manual, fonte de O₂, aspirador, e fármacos de emergência). Material de procedimento  de biópsia conferidos e montados de forma asséptica.
+Paciente posicionado conforme orientação médica, respeitando princípios de segurança e conforto. Realizo punção venosa periférica cateter _____ , realizado teste de permeabilidade com 10ml de SF 0,9%, apto para uso. 
+Anestesia conduzida pelo anestesiologista conforme protocolo institucional, mantendo paciente sob vigilância contínua da equipe de enfermagem e anestesia durante todo o procedimento, com monitorização por monitor multiparamétrico. O procedimento foi realizado sem intercorrências clínicas.
+Ao término, efetuada compressão local e curativo estéril oclusivo, conforme técnica asséptica. Monitorização mantida até completa recuperação anestésica. Sinais vitais estáveis, paciente consciente, orientado, eupneico e em ar ambiente.
+Foram reforçadas orientações pós-procedimento quanto a cuidados com o curativo, sinais de alerta (dispneia, dor torácica, sangramento, febre) e importância do repouso conforme prescrição médica.
+Paciente encaminhado em _____ , acompanhado pela _____ , para _____ , sem intercorrências durante o trajeto.
+
+`,
+    campos: ["Calibre", "encaminhado", "acompanhado", "para"]
   }
+
 };
 
 // =====================================================
@@ -258,14 +317,13 @@ document.addEventListener("click", e => {
 });
 
 // =====================================================
-// COPIAR TEXTO — AGORA APENAS AVISA SE FALTAR CAMPOS
+// COPIAR TEXTO — AVISA SE FALTAR CAMPOS, MAS COPIA
 // =====================================================
 
 async function copyText() {
   const box = document.getElementById("textArea");
   const inputs = box.querySelectorAll("input");
 
-  // 🔥 Apenas AVISA, não impede a cópia
   let faltando = false;
   for (let inp of inputs) {
     if (inp.value.trim() === "") {
@@ -278,7 +336,6 @@ async function copyText() {
     alert("⚠️ Existem campos vazios. Verifique antes de copiar.");
   }
 
-  // Continua copiando normalmente
   const clone = box.cloneNode(true);
   clone.querySelectorAll("input").forEach(inp => {
     const span = document.createElement("span");
@@ -295,5 +352,3 @@ async function copyText() {
 
   setTimeout(() => banner.remove(), 1500);
 }
-
-
