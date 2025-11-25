@@ -10,7 +10,7 @@ const opcoes = {
   ExameCoronaria: ["Henetix", "Outro"],
   Realizados: ["Scout, elevação do membro", "Outro"],
   Calibre: ["18", "20", "22", "24"], 
-  encaminhado: ["ambulando", "maca"], 
+  encaminhado: ["deambulando", "maca"], 
   acompanhado: ["familiares", "enfermagem"],
   para: ["domicilio", "leito de internamento"],
   
@@ -136,11 +136,11 @@ Paciente externo vem para realizar exame sem contraste. Posicionado conforme pro
 Realizo protocolo de identificação do paciente conforme protocolo institucional, com checagem da pulseira e conferência de dados de segurança. Oriento sobre o exame, esclarecendo dúvidas e aplicando os questionários de triagem preconizados.
 Verifiado os sinais vitais, devidamente anotados em prontuário. Realizei punção venosa periférica com cateter calibre _____, em membro _____ , obtendo sucesso na _____tentativa. 
 Foi realizado teste de permeabilidade com 10 mL de soro fisiológico, acesso pérvio e sem sinais de intercorrências.
-Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _mL de soro via vaginal e _____ mL de soro via retal, sem queixas. Em seguida, administrei o Brometo de Escopolamina (Buscopan) conforme prescrição médica, através do acesso venoso, sem eventos adversos.
-Realizada administração do contraste Dotaren em BIC _____, com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição médica, sem sinais de extravasamento ou reações adversas. Procedimento ocorreu normalmente, sem intercorrências.
+Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _____ mL de soro via vaginal e _____ mL de soro via retal, sem queixas. Em seguida, administrei o Brometo de Escopolamina (Buscopan) conforme prescrição médica, através do acesso venoso, sem eventos adversos.
+Realizada administração do contraste _____ em BIC, _____ frasco com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição médica, sem sinais de extravasamento ou reações adversas. Procedimento ocorreu normalmente, sem intercorrências.
 Exame finalizado. Paciente retirado da sala em boas condições clínicas, com sinais vitais estáveis, orientado quanto aos cuidados pós-exame e liberado para domicílio.
 `,
-    campos: ["Calibre","membro","number","number","",""]
+    campos: ["Calibre","membro","number","TipoTCRM","number","TipoTCRM","number"]
   },
 
   colonoVirtual: {
@@ -174,7 +174,7 @@ Paciente posicionado conforme orientação médica, respeitando princípios de s
 Anestesia conduzida pelo anestesiologista conforme protocolo institucional, mantendo paciente sob vigilância contínua da equipe de enfermagem e anestesia durante todo o procedimento, com monitorização por monitor multiparamétrico. O procedimento foi realizado sem intercorrências clínicas.
 Ao término, efetuada compressão local e curativo estéril oclusivo, conforme técnica asséptica. Monitorização mantida até completa recuperação anestésica. Sinais vitais estáveis, paciente consciente, orientado, eupneico e em ar ambiente.
 Foram reforçadas orientações pós-procedimento quanto a cuidados com o curativo, sinais de alerta (dispneia, dor torácica, sangramento, febre) e importância do repouso conforme prescrição médica.
-Paciente encaminhado em _____ , acompanhado pela _____ , para _____ , sem intercorrências durante o trajeto.
+Paciente encaminhado em _____ , em companhia _____ , para _____ , sem intercorrências durante o trajeto.
 
 `,
     campos: ["Calibre", "encaminhado", "acompanhado", "para"]
