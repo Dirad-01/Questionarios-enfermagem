@@ -13,7 +13,6 @@ const opcoes = {
   encaminhado: ["deambulando", "maca"], 
   acompanhado: ["familiares", "enfermagem"],
   para: ["domicilio", "leito de internamento"],
-  
 };
 
 // =====================================================
@@ -25,17 +24,17 @@ const modelos = {
   contrasteExterno: {
     titulo: "Contraste Externo",
     texto: `
-Paciente externo realizou questionário e anamnese em anexo. Realizo punção de acesso venoso periférico na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Realizo teste de contraste via venosa: Tipo _____, Volume administrado: _____ frasco, em BIC, com 2 seringas angiografica e válvula anti-refluxo, conforme protocolo, sem intercorrências.
+Paciente externo realizou questionário e anamnese em anexo. Realizo punção de acesso venoso periférico na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Realizo teste de contraste via venosa: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica e válvula anti-refluxo, conforme protocolo, sem intercorrências.
 Paciente liberado para domicílio em ar ambiente, orientado, nega dor, acompanhado por familiares. Orientações pós contraste fornecidas.
 `,
-    campos: ["number", "membro", "Calibre", "TipoTCRM", "number"]
+    campos: ["number", "membro", "Calibre", "TipoTCRM", "number","number","","data"]
   },
 
   tomog: {
     titulo: "Contraste Emergencia",
     texto: `
 Paciente proveniente da emergência com punção no membro: _____ Calibre do cateter: _____ G, realizo teste de infusão pré exame, conforme protocolo. 
-Administrado Contraste via venosa: Tipo _____ Volume administrado: _____ frasco, em BIC, com 2 seringas angiografica e válvula anti-refluxo, conforme protocolo, sem intercorrências.
+Administrado Contraste via venosa: Tipo _____ volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica e válvula anti-refluxo, conforme protocolo, sem intercorrências.
 Encaminho paciente para setor de origem em cadeira de rodas, em ambiente, orientado, nega dor, acompanhado por familiares, enfermagem, oriento pós contraste.
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number"]
@@ -78,7 +77,8 @@ Paciente admitido no setor para tomografia computadorizada coronariana.
 Realizada orientação prévia quanto ao procedimento, posicionamento e necessidade de colaboração em apneias. Realizo questionário e anamnese em anexo.
 Realizo punção de acesso venoso periférico na _____ tentativa, membro puncionado: _____. Calibre do cateter: 18G. Teste de infusão realizado conforme protocolo.
 Sinais vitais monitorizados antes e após o exame, estáveis. Medicação administrada conforme prescrição.
-Acesso com bom fluxo, utilizado para infusão do meio iodado: Tipo _____, Volume administrado: _____ frasco, em BIC, com 2 seringas angiografica e válvula anti-refluxo, sem intercorrências.
+Acesso com bom fluxo, utilizado para infusão do meio iodado: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____ 
+em BIC, com 2 seringas angiografica e válvula anti-refluxo, sem intercorrências.
 Paciente colaborativo, tolerou bem o procedimento, encaminhado em cadeira de rodas, orientado, sinais vitais normais.
 `,
     campos: ["number", "membro", "TipoTCRM", "number"]
@@ -88,7 +88,7 @@ Paciente colaborativo, tolerou bem o procedimento, encaminhado em cadeira de rod
     titulo: "Extravasamento Externo",
     texto: `
 Paciente externo realizou questionário e anamnese em anexo. Punção realizada na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Teste de infusão pré exame conforme protocolo.
-Durante administração de contraste: Tipo _____, Volume administrado: _____ frasco, apresentou extravasamento.
+Durante administração de contraste: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____, apresentou extravasamento.
 Realizado scalt, retirada imediata do acesso, compressa fria aplicada e elevação do membro. Paciente referindo _____. Cuidados realizados: _____. Encaminhado para avaliação médica ou vascular conforme protocolo.
 Conduta: compressa fria intermitente, vigilância do membro, orientar retorno se dor intensa, edema progressivo ou alteração de perfusão.
 Paciente orientado, compreensivo, evoluindo estável. Liberado para domicílio acompanhado. Notificação preenchida.
@@ -100,7 +100,7 @@ Paciente orientado, compreensivo, evoluindo estável. Liberado para domicílio a
     titulo: "Extravasamento Interno",
     texto: `
 Paciente interno com acesso venoso prévio funcional. Membro puncionado: _____. Calibre do cateter: _____ G.
-Durante administração de contraste: Tipo _____, Volume administrado: _____ frasco, apresentou extravasamento.
+Durante administração de contraste: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____ , apresentou extravasamento.
 Realizado scalt, retirada imediata do acesso, compressa fria local aplicada e elevação do membro. Paciente referindo _____. Cuidados realizados: _____. Encaminhado para avaliação médica ou vascular conforme protocolo.
 Conduta: compressa fria intermitente, vigilância do membro, retorno imediato em caso de dor intensa, edema ou alteração de perfusão.
 Paciente orientado e estável, retornando ao setor. Notificação preenchida.
@@ -127,7 +127,7 @@ Paciente externo vem para realizar exame sem contraste. Posicionado conforme pro
   },
 
   // =====================================================
-  // NOVOS 4 MODELOS — ADICIONADOS NO FINAL
+  // NOVOS MODELOS
   // =====================================================
 
   pelveContraste: {
@@ -225,16 +225,28 @@ function abrirModelo(key) {
 
     if (i < partes.length - 1) {
       const tipo = campos[pos++] || "text";
+
       const input = document.createElement("input");
       input.className = "fillField";
 
-      input.type = opcoes[tipo] ? "text" : (tipo === "number" ? "number" : "text");
+      // ==========================
+      // SUPORTE PARA INPUT DATE
+      // ==========================
+      if (tipo === "number") {
+        input.type = "number";
 
-      if (opcoes[tipo]) {
+      } else if (tipo === "data") {
+        input.type = "date";
+
+      } else if (opcoes[tipo]) {
+        input.type = "text";
         input.dataset.key = tipo;
         input.addEventListener("focus", () => mostrarSugestoes(input, true));
         input.addEventListener("input", () => mostrarSugestoes(input));
         input.addEventListener("keydown", navegarSugestoes);
+
+      } else {
+        input.type = "text";
       }
 
       frag.appendChild(input);
