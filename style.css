@@ -1,163 +1,221 @@
-/* Fonte estilo Aptos Corpo (Inter ajustada) */
+/* ===== FONTES ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/* ===== VARIÁVEIS DE TEMA (PREMIUM) ===== */
 :root {
-  --bg: #e7d8a1;
-  --sidebar-bg: #fdf9c7;
-  --text: #4c3711;
-  --primary: #7a551f;
-  --primary-dark: #614319;
-  --border: #c0aa78;
-  --border-light: #e7d5a4;
-  --shadow: rgba(0, 0, 0, 0.08);
-  --shadow-strong: rgba(0, 0, 0, 0.16);
+  --bg: #f8f6f1;
+  --sidebar-bg: #ffffff;
+
+  --text: #383838;
+
+  /* Paleta premium caramelo */
+  --primary: #7c5a2e;
+  --primary-light: #a8844e;
+  --primary-dark: #5a3e1c;
+
+  --border: #e2dbcf;
+
+  --shadow: rgba(0, 0, 0, 0.06);
+  --shadow-strong: rgba(0, 0, 0, 0.18);
+
   --radius: 14px;
-  --font: "Inter", system-ui, sans-serif;
+  --font: "Inter", sans-serif;
 }
 
+/* ==== RESET ==== */
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* ======== BODY ======== */
+/* ==== BODY ==== */
 body {
   font-family: var(--font);
   background: var(--bg);
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ======== LAYOUT ======== */
+/* ==== LAYOUT PRINCIPAL ==== */
 .layout {
   display: flex;
   min-height: 100vh;
 }
 
-/* ======== SIDEBAR ======== */
+/* =====================================
+   ======== SIDEBAR MODERNA ============
+   ===================================== */
 .sidebar {
-  width: 290px;
+  width: 300px;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--border);
-  padding: 25px;
-  box-shadow: 4px 0 12px var(--shadow);
-}
-
-.sidebar h2 {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 18px;
-  letter-spacing: 0.3px;
-}
-
-#modelList {
+  padding: 26px 22px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 18px;
+  box-shadow: 4px 0 20px var(--shadow);
 }
 
-/* ======== BOTÕES DE MODELO ======== */
+.sidebar-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.model-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== BOTÕES DE MODELO (CARD STYLE) ===== */
 .model-item {
   padding: 14px 18px;
-  background: #fffce5;
+  background: #ffffff;
   border-radius: var(--radius);
-  border: 1px solid var(--border-light);
-  font-size: 16px;
+  border: 1px solid var(--border);
+  font-size: 15px;
   cursor: pointer;
-  text-align: left;
   font-weight: 500;
-  color: var(--text);
-  transition: 0.2s;
-  letter-spacing: 0.3px;
+  color: #444;
+  transition: 0.22s ease;
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 .model-item:hover {
-  background: #f6eec4;
+  background: #f5f1e6;
   transform: translateX(4px);
+  box-shadow: 0 4px 14px var(--shadow);
 }
 
 .model-item.active {
   background: var(--primary);
   color: white;
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.22);
 }
 
-/* ======== ÁREA DE CONTEÚDO ======== */
+/* =====================================
+   ========== ÁREA PRINCIPAL ===========
+   ===================================== */
+
 .content-area {
   flex: 1;
-  padding: 40px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
-.content-area h2 {
-  font-size: 26px;
+.content-title {
+  font-size: 28px;
   font-weight: 600;
-  margin-bottom: 18px;
-  color: var(--text);
-  letter-spacing: 0.4px;
+  color: var(--primary-dark);
 }
 
-/* ======== CAIXA DO TEXTO ======== */
+/* ====== CAIXA DO TEXTO ====== */
 .textBox {
-  background: var(--sidebar-bg);
-  padding: 28px;
+  background: #ffffff;
+  padding: 30px;
   border-radius: var(--radius);
-  border: 1px solid var(--border-light);
-  box-shadow: 0 4px 14px var(--shadow);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 18px var(--shadow);
   font-size: 18px;
-  line-height: 1.75;
-  letter-spacing: 0.2px;
+  line-height: 1.7;
+  color: #444;
   white-space: pre-wrap;
-  color: var(--text);
+  transition: 0.25s ease;
 }
 
-/* ======== INPUTS INLINE ======== */
+/* Borda dinâmica da caixa ao focar qualquer input dentro */
+.textBox:focus-within {
+  border-color: var(--primary);
+  box-shadow:
+    0 0 0 2px rgba(124, 90, 46, 0.25),
+    0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* ======= INPUTS INLINE (PREMIUM) ======= */
 .textBox .fillField {
   display: inline-block;
-  padding: 4px 6px;
+  padding: 6px 8px;
   font-size: 15px;
-  width: 100px !important;
-  max-width: 100px !important;
-  min-width: 150px !important;
-  height: 30px;
-
-  border-radius: 6px;
+  width: 160px;
+  min-width: 140px;
+  border-radius: 8px;
   border: 1px solid var(--border);
-  background: #fffde8;
-  color: var(--text);
-  margin: 0 4px;
-  transition: 0.15s ease;
+  background: #faf9f6;
+  color: #333;
+  transition: 0.18s ease;
+
+  /* FIX: permite que a suggestBox fique sempre alinhada */
+  position: relative;
 }
 
 .textBox .fillField[type="number"] {
-  width: 65px !important;
-  min-width: 65px !important;
-  max-width: 65px !important;
+  width: 70px;
   text-align: center;
 }
 
+/* Foco Premium */
 .textBox .fillField:focus {
   border-color: var(--primary);
-  background: white;
-  box-shadow: 0 0 0 3px rgba(122, 85, 31, 0.25);
+  background: #fffdfa;
   outline: none;
+
+  box-shadow:
+    0 0 0 2px rgba(124, 90, 46, 0.25),
+    0 4px 12px rgba(0,0,0,0.12);
+
+  animation: fieldPulse 0.25s ease-out;
+}
+
+@keyframes fieldPulse {
+  0% { box-shadow: 0 0 0 0 rgba(124, 90, 46, 0); }
+  100% { box-shadow: 0 0 0 2px rgba(124, 90, 46, 0.25); }
 }
 
 .textBox span {
-  padding: 2px 4px;
-  background: #fff4c2;
-  border-radius: 5px;
+  padding: 3px 6px;
+  background: #f3e7d4;
+  border-radius: 6px;
+  color: var(--primary-dark);
   font-weight: 600;
-  color: #5a4213;
 }
 
-/* ======== LISTA DE SUGESTÕES ======== */
+/* ====== SUGESTÕES (ALINHADAS PERFEITAS) ====== */
 .suggestBox {
   position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+
+  width: 100%;            /* <- AGORA A LARGURA É IGUAL AO INPUT */
+  max-width: 100%;        /* <- nunca ultrapassa */
   background: #ffffff;
   border-radius: 12px;
-  border: 1px solid #bbb7a3;
-  padding: 4px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  border: 1px solid #d5d0c3;
+  padding: 6px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+
   z-index: 9999;
+  animation: fadeDown 0.18s ease;
+
+  overflow: hidden;       /* <- impede de escapar para fora */
+}
+}
+
+/* Animação suave ao abrir */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .suggestItem {
@@ -166,21 +224,21 @@ body {
   cursor: pointer;
   font-size: 15px;
   font-weight: 500;
-  color: #3a3a3a;
-  letter-spacing: 0.2px;
-  transition: 0.15s ease;
+  color: #333;
+  transition: 0.18s ease;
 }
 
 .suggestItem:hover,
 .suggestItem.highlight {
-  background: #e6f0ff;
-  color: #1a3d7a;
+  background: #efe5cc;
+  color: #5a3e1c;
 }
 
-/* ======== BOTÃO COPIAR ======== */
+/* ====== BOTÃO DE COPIAR ====== */
 .copyBtn {
-  margin-top: 20px;
-  padding: 14px 28px;
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 14px 32px;
   background: var(--primary);
   border: none;
   border-radius: var(--radius);
@@ -188,8 +246,8 @@ body {
   font-size: 16px;
   cursor: pointer;
   letter-spacing: 0.3px;
-  box-shadow: 0 6px 18px rgba(122, 85, 31, 0.35);
-  transition: 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  transition: 0.22s ease;
 }
 
 .copyBtn:hover {
@@ -197,36 +255,57 @@ body {
   transform: translateY(-2px);
 }
 
-/* ======== BANNER “COPIADO” ======== */
+/* ==== BANNER DE "COPIADO" (PREMIUM ANIMADO) ==== */
 .copyBanner {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
-  background: var(--primary);
-  padding: 14px 20px;
-  border-radius: 12px;
+  right: 22px;
+  bottom: 22px;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  padding: 16px 26px;
+  border-radius: 14px;
   font-weight: 600;
   color: white;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.32);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: bannerShow 0.55s ease forwards;
 }
 
-/* ======== HIDDEN ======== */
+@keyframes bannerShow {
+  0% { opacity: 0; transform: translateY(14px); }
+  60% { opacity: 1; transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+/* ==== OCULTO ==== */
 .hidden {
   display: none;
 }
 
-/* ===================================================== */
-/* ======================= FOOTER ======================= */
-/* ===================================================== */
-
+/* ==== FOOTER ==== */
 .footer {
   width: 100%;
-  background: #f5e8b8; /* tom suave que combina com o fundo */
-  color: var(--text);
   text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-  font-size: 14px;
+  padding: 14px 0;
+  background: #f1ede5;
   border-top: 1px solid var(--border);
-  letter-spacing: 0.3px;
+  color: #5b4b2e;
+  font-size: 14px;
+  margin-top: 25px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 14px var(--shadow);
+  }
+  .content-area {
+    padding: 28px;
+  }
 }
