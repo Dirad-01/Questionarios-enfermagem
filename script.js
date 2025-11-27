@@ -35,12 +35,12 @@ Paciente liberado para domicílio em ar ambiente, orientado, nega dor, acompanha
 
 Matérias descartáveis utilizados:
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "Calibre", "TipoTCRM", "number","administrado",
 			"","data","Esparadrapo","number","Seringa","number","Agulha",
@@ -56,12 +56,12 @@ Encaminho paciente para setor de origem em cadeira de rodas, em ambiente, orient
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
 			"Esparadrapo","number","Seringa","number","Agulha","number",
@@ -77,12 +77,12 @@ Paciente encaminhado ao setor de origem em ar ambiente, orientado, nega dor, aco
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
 			"Esparadrapo","number","Seringa","number","Agulha","number",
@@ -122,12 +122,12 @@ Paciente colaborativo, tolerou bem o procedimento, encaminhado em cadeira de rod
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "TipoTCRM", "number",
 			"administrado","","data","Esparadrapo","number",
@@ -147,12 +147,12 @@ Paciente orientado, compreensivo, evoluindo estável. Liberado para domicílio a
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "Calibre", "TipoTCRM", "number",
 			"administrado", "","data","","Realizados","Esparadrapo",
@@ -172,12 +172,12 @@ Paciente orientado e estável, retornando ao setor. Notificação preenchida.
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number", "administrado",
 			"","data","Referindo","Realizados","Esparadrapo","number",
@@ -193,12 +193,12 @@ Encaminhado ao setor/alta acompanhado por familiar.
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
@@ -210,12 +210,12 @@ Paciente externo vem para realizar exame sem contraste. Posicionado conforme pro
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
@@ -236,12 +236,12 @@ Exame finalizado. Paciente retirado da sala em boas condições clínicas, com s
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["Calibre","membro","number","TipoTCRM","number","TipoTCRM",
 			"number","","data","Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
@@ -257,12 +257,12 @@ Exame realizado com sucesso, sem intercorrências. Paciente permaneceu estável,
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
@@ -277,12 +277,12 @@ Exame realizado com sucesso, sem eventos adversos. Paciente manteve-se estável,
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["number","Esparadrapo","number","Seringa","number",
 			"Agulha","number","","number","Luva","number","","number",""]
@@ -301,12 +301,12 @@ Paciente encaminhado em _____ , em companhia _____ , para _____ , sem intercorr�
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo: _____ quantidade: _____
-Seringa: _____ quantidade: _____ 
-Agulha:  _____ quantidade: _____
-Gase:    _____ quantidade: _____
-Luva:    _____ quantidade: _____
-Outros:  _____ quantidade: _____
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____ 
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
 `,
     campos: ["Calibre", "encaminhado", "acompanhado", "para",
 			"Esparadrapo","number","Seringa","number","Agulha",
@@ -532,3 +532,4 @@ async function copyText() {
     setTimeout(() => banner.remove(), 2000);
   }, faltando ? 300 : 0);
 }
+
