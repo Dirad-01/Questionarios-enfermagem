@@ -35,7 +35,7 @@ Paciente liberado para domicílio em ar ambiente, orientado, nega dor, acompanha
 
 Matérias descartáveis utilizados:
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -56,7 +56,7 @@ Encaminho paciente para setor de origem em cadeira de rodas, em ambiente, orient
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -77,7 +77,7 @@ Paciente encaminhado ao setor de origem em ar ambiente, orientado, nega dor, aco
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -122,7 +122,7 @@ Paciente colaborativo, tolerou bem o procedimento, encaminhado em cadeira de rod
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -147,7 +147,7 @@ Paciente orientado, compreensivo, evoluindo estável. Liberado para domicílio a
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -172,7 +172,7 @@ Paciente orientado e estável, retornando ao setor. Notificação preenchida.
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -193,7 +193,7 @@ Encaminhado ao setor/alta acompanhado por familiar.
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -210,7 +210,7 @@ Paciente externo vem para realizar exame sem contraste. Posicionado conforme pro
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -236,7 +236,7 @@ Exame finalizado. Paciente retirado da sala em boas condições clínicas, com s
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -257,7 +257,7 @@ Exame realizado com sucesso, sem intercorrências. Paciente permaneceu estável,
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -277,14 +277,15 @@ Exame realizado com sucesso, sem eventos adversos. Paciente manteve-se estável,
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
 Luva:    _____ quantidade: _____
 Outros:  _____ quantidade: _____
 `,
-    campos: ["number"]
+    campos: ["number","Esparadrapo","number","Seringa","number",
+			"Agulha","number","","number","Luva","number","","number",""]
   },
 
   Biopsiasedacao: {
@@ -300,7 +301,7 @@ Paciente encaminhado em _____ , em companhia _____ , para _____ , sem intercorr�
 
 Matérias descartáveis utilizados: 
 
-Esparadrapo:_____ quantidade: _____
+Esparadrapo: _____ quantidade: _____
 Seringa: _____ quantidade: _____ 
 Agulha:  _____ quantidade: _____
 Gase:    _____ quantidade: _____
@@ -421,9 +422,10 @@ function mostrarSugestoes(input, mostrarTudo = false) {
   });
 
   const rect = input.getBoundingClientRect();
-  box.style.left = rect.left + "px";
-  box.style.top = rect.bottom + "px";
-  box.style.width = rect.width + "px";
+box.style.left = rect.left + "px";
+box.style.top = rect.bottom + "px";
+box.style.width = rect.width + "px";
+
 
   input._box = box;
   document.body.appendChild(box);
@@ -476,23 +478,57 @@ async function copyText() {
     }
   }
 
+  // Remove banners anteriores
+  document.querySelectorAll(".copyBanner").forEach(b => b.remove());
+  document.querySelectorAll(".warningBanner").forEach(b => b.remove());
+
+  // Se existem campos vazios → mostra alerta no canto esquerdo
   if (faltando) {
-    alert("⚠️ Existem campos vazios. Verifique antes de copiar.");
+    const aviso = document.createElement("div");
+    aviso.className = "warningBanner";
+    aviso.style.position = "fixed";
+    aviso.style.left = "24px";
+    aviso.style.bottom = "24px";
+    aviso.style.background = "#8b6a2a";
+    aviso.style.color = "white";
+    aviso.style.padding = "14px 20px";
+    aviso.style.borderRadius = "12px";
+    aviso.style.fontWeight = "600";
+    aviso.style.boxShadow = "0 6px 20px rgba(0,0,0,0.25)";
+    aviso.textContent =
+      "⚠ Existem campos vazios. Mesmo assim o texto foi copiado.";
+    document.body.appendChild(aviso);
+
+    setTimeout(() => aviso.remove(), 2000);
   }
 
+  // Copiar texto mesmo assim
   const clone = box.cloneNode(true);
+
   clone.querySelectorAll("input").forEach(inp => {
     const span = document.createElement("span");
-    span.textContent = inp.value || "_____";
+    span.textContent = inp.value.trim() !== "" ? inp.value : "_____";
     inp.replaceWith(span);
   });
 
   await navigator.clipboard.writeText(clone.innerText);
 
-  const banner = document.createElement("div");
-  banner.className = "copyBanner";
-  banner.textContent = "Copiado!";
-  document.body.appendChild(banner);
+  // Delay leve para que o aviso não se sobreponha ao banner de cópia
+  setTimeout(() => {
+    const banner = document.createElement("div");
+    banner.className = "copyBanner";
+    banner.style.position = "fixed";
+    banner.style.right = "24px";
+    banner.style.bottom = "24px";
+    banner.style.background = "#5d3f16";
+    banner.style.color = "white";
+    banner.style.padding = "14px 20px";
+    banner.style.borderRadius = "12px";
+    banner.style.fontWeight = "600";
+    banner.style.boxShadow = "0 6px 20px rgba(0,0,0,0.25)";
+    banner.textContent = "✔ Texto copiado!";
+    document.body.appendChild(banner);
 
-  setTimeout(() => banner.remove(), 1500);
+    setTimeout(() => banner.remove(), 2000);
+  }, faltando ? 300 : 0);
 }
