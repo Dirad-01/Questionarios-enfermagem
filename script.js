@@ -13,6 +13,12 @@ const opcoes = {
   encaminhado: ["deambulando", "maca"], 
   acompanhado: ["familiares", "enfermagem"],
   para: ["domicilio", "leito de internamento"],
+  Seringa: ["3ML", "5ML","10ML","20ML","60ML"],
+  Agulha: ["25x7", "40x12","30x7"],
+  Esparadrapo: ["comum", "antialérgico"],
+  Luva: ["P", "M","Estéreo"],
+  administrado: ["1", "2","3","4"],
+
 };
 
 // =====================================================
@@ -26,8 +32,19 @@ const modelos = {
     texto: `
 Paciente externo realizou questionário e anamnese em anexo. Realizo punção de acesso venoso periférico na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Realizo teste de contraste via venosa: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica e válvula anti-refluxo, conforme protocolo, sem intercorrências.
 Paciente liberado para domicílio em ar ambiente, orientado, nega dor, acompanhado por familiares. Orientações pós contraste fornecidas.
+
+Matérias descartáveis utilizados:
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: ["number", "membro", "Calibre", "TipoTCRM", "number","number","","data"]
+    campos: ["number", "membro", "Calibre", "TipoTCRM", "number","administrado",
+			"","data","Esparadrapo","number","Seringa","number","Agulha",
+			"number","","number","Luva","number","","number",""]
   },
 
   tomog: {
@@ -36,18 +53,40 @@ Paciente liberado para domicílio em ar ambiente, orientado, nega dor, acompanha
 Paciente proveniente da emergência com punção no membro: _____ Calibre do cateter: _____ G, realizo teste de infusão pré exame, conforme protocolo. 
 Administrado Contraste via venosa: Tipo _____ volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica e válvula anti-refluxo, conforme protocolo, sem intercorrências.
 Encaminho paciente para setor de origem em cadeira de rodas, em ambiente, orientado, nega dor, acompanhado por familiares, enfermagem, oriento pós contraste.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: ["membro", "Calibre", "TipoTCRM", "number"]
+    campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
+			"Esparadrapo","number","Seringa","number","Agulha","number",
+			"","number","Luva","number","","number",""	]
   },
 
   contrasteInterno: {
     titulo: "Contraste Interno",
     texto: `
 Recebo paciente com acesso venoso prévio. Membro puncionado: _____. Calibre do cateter: _____ G. Realizo teste de infusão pré exame conforme protocolo.
-Administrado contraste via venosa: Tipo _____, Volume administrado: _____ frasco em BIC, com 2 seringas angiografica e válvula anti-refluxo, sem intercorrências.
+Administrado contraste via venosa: Tipo _____,volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica e válvula anti-refluxo, sem intercorrências.
 Paciente encaminhado ao setor de origem em ar ambiente, orientado, nega dor, acompanhado por familiares. Orientações pós contraste fornecidas.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: ["membro", "Calibre", "TipoTCRM", "number"]
+    campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
+			"Esparadrapo","number","Seringa","number","Agulha","number",
+			"","number","Luva","number","","number",""	]
   },
 
   dacrio: {
@@ -80,32 +119,69 @@ Sinais vitais monitorizados antes e após o exame, estáveis. Medicação admini
 Acesso com bom fluxo, utilizado para infusão do meio iodado: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____ 
 em BIC, com 2 seringas angiografica e válvula anti-refluxo, sem intercorrências.
 Paciente colaborativo, tolerou bem o procedimento, encaminhado em cadeira de rodas, orientado, sinais vitais normais.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: ["number", "membro", "TipoTCRM", "number"]
+    campos: ["number", "membro", "TipoTCRM", "number",
+			"administrado","","data","Esparadrapo","number",
+			"Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
 
   extravasamentoExterno: {
     titulo: "Extravasamento Externo",
     texto: `
-Paciente externo realizou questionário e anamnese em anexo. Punção realizada na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Teste de infusão pré exame conforme protocolo.
+Paciente externo realizou questionário e anamnese em anexo.
+Punção realizada na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Teste de infusão pré exame conforme protocolo.
 Durante administração de contraste: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____, apresentou extravasamento.
-Realizado scalt, retirada imediata do acesso, compressa fria aplicada e elevação do membro. Paciente referindo _____. Cuidados realizados: _____. Encaminhado para avaliação médica ou vascular conforme protocolo.
+Realizado scalt, retirada imediata do acesso, compressa fria aplicada e elevação do membro.
+Paciente referindo _____. Cuidados realizados: _____. Encaminhado para avaliação médica ou vascular conforme protocolo.
 Conduta: compressa fria intermitente, vigilância do membro, orientar retorno se dor intensa, edema progressivo ou alteração de perfusão.
 Paciente orientado, compreensivo, evoluindo estável. Liberado para domicílio acompanhado. Notificação preenchida.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: ["number", "membro", "Calibre", "TipoTCRM", "number", "Referindo", "Realizados"]
+    campos: ["number", "membro", "Calibre", "TipoTCRM", "number",
+			"administrado", "","data","","Realizados","Esparadrapo",
+			"number","Seringa","number","Agulha","number","","number",
+			"Luva","number","","number",""]
   },
 
   extravasamentoInterno: {
     titulo: "Extravasamento Interno",
     texto: `
-Paciente interno com acesso venoso prévio funcional. Membro puncionado: _____. Calibre do cateter: _____ G.
+Paciente interno com acesso venoso prévio funcional. Membro puncionado: _____.
+Calibre do cateter: _____ G.
 Durante administração de contraste: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____ , apresentou extravasamento.
 Realizado scalt, retirada imediata do acesso, compressa fria local aplicada e elevação do membro. Paciente referindo _____. Cuidados realizados: _____. Encaminhado para avaliação médica ou vascular conforme protocolo.
 Conduta: compressa fria intermitente, vigilância do membro, retorno imediato em caso de dor intensa, edema ou alteração de perfusão.
 Paciente orientado e estável, retornando ao setor. Notificação preenchida.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: ["membro", "Calibre", "TipoTCRM", "number", "Referindo", "Realizados"]
+    campos: ["membro", "Calibre", "TipoTCRM", "number", "administrado",
+			"","data","Referindo","Realizados","Esparadrapo","number",
+			"Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
 
   sedacao: {
@@ -114,16 +190,34 @@ Paciente orientado e estável, retornando ao setor. Notificação preenchida.
 Paciente submetido a exame com sedação. Apresentou recuperação anestésica adequada: consciente, orientado, deambulando sem intercorrências e em ar ambiente. Sinais vitais estáveis.
 Orientações pós exame fornecidas: repouso, hidratação, evitar dirigir e atividades de risco.
 Encaminhado ao setor/alta acompanhado por familiar.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: []
+    campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
 
   semContrasteExterno: {
     titulo: "Sem Contraste (Externo)",
     texto: `
 Paciente externo vem para realizar exame sem contraste. Posicionado conforme protocolo. Documentação anexada. Procedimento realizado sem intercorrências.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: []
+    campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
 
   // =====================================================
@@ -137,10 +231,20 @@ Realizo protocolo de identificação do paciente conforme protocolo instituciona
 Verifiado os sinais vitais, devidamente anotados em prontuário. Realizei punção venosa periférica com cateter calibre _____, em membro _____ , obtendo sucesso na _____tentativa. 
 Foi realizado teste de permeabilidade com 10 mL de soro fisiológico, acesso pérvio e sem sinais de intercorrências.
 Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _____ mL de soro via vaginal e _____ mL de soro via retal, sem queixas. Em seguida, administrei o Brometo de Escopolamina (Buscopan) conforme prescrição médica, através do acesso venoso, sem eventos adversos.
-Realizada administração do contraste _____ em BIC, _____ frasco com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição médica, sem sinais de extravasamento ou reações adversas. Procedimento ocorreu normalmente, sem intercorrências.
+Realizada administração do contraste _____ em BIC, _____ frasco, lote _____, validade _____  com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição médica, sem sinais de extravasamento ou reações adversas. Procedimento ocorreu normalmente, sem intercorrências.
 Exame finalizado. Paciente retirado da sala em boas condições clínicas, com sinais vitais estáveis, orientado quanto aos cuidados pós-exame e liberado para domicílio.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: ["Calibre","membro","number","TipoTCRM","number","TipoTCRM","number"]
+    campos: ["Calibre","membro","number","TipoTCRM","number","TipoTCRM",
+			"number","","data","Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
 
   colonoVirtual: {
@@ -150,8 +254,17 @@ Paciente admitido no setor para realização de tomografia de colono virtual. Re
 Foram verificados os sinais vitais, devidamente registrados em prontuário. Em seguida, o paciente foi posicionado conforme protocolo para o exame.
 Realizei aplicação de xilocaína gel, seguida da introdução de sonda retal nº 16, com boa aceitação e sem queixas importantes. Durante todo o preparo, o paciente recebeu orientações sobre o procedimento e etapas subsequentes. Procedimento sendo conduzido pelo médico.
 Exame realizado com sucesso, sem intercorrências. Paciente permaneceu estável, sendo orientado após o término e liberado por conduta médica em boas condições gerais.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: []
+    campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
 
   entero: {
@@ -161,6 +274,15 @@ Paciente admitido no setor para realização de Enterografia. Realizada identifi
 Iniciei o preparo do exame conforme prescrição médica: preparei a solução com laxante osmótico, utilizando _____ saches/doses diluídos em 1 litro de água mineral. Procedi às orientações ao paciente quanto à ingestão da solução, reforçando volume, ritmo e etapas conforme prescrição médica.
 Paciente realizou a ingestão da solução conforme orientado, sem queixas e sem intercorrências. Após tempo adequado, o paciente foi encaminhado e posicionado para o exame seguindo o protocolo institucional.
 Exame realizado com sucesso, sem eventos adversos. Paciente manteve-se estável, orientado após o procedimento e liberado com sinais vitais estáveis.
+
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
     campos: ["number"]
   },
@@ -176,8 +298,18 @@ Ao término, efetuada compressão local e curativo estéril oclusivo, conforme t
 Foram reforçadas orientações pós-procedimento quanto a cuidados com o curativo, sinais de alerta (dispneia, dor torácica, sangramento, febre) e importância do repouso conforme prescrição médica.
 Paciente encaminhado em _____ , em companhia _____ , para _____ , sem intercorrências durante o trajeto.
 
+Matérias descartáveis utilizados: 
+
+Esparadrapo:_____ quantidade: _____
+Seringa: _____ quantidade: _____ 
+Agulha:  _____ quantidade: _____
+Gase:    _____ quantidade: _____
+Luva:    _____ quantidade: _____
+Outros:  _____ quantidade: _____
 `,
-    campos: ["Calibre", "encaminhado", "acompanhado", "para"]
+    campos: ["Calibre", "encaminhado", "acompanhado", "para",
+			"Esparadrapo","number","Seringa","number","Agulha",
+			"number","","number","Luva","number","","number",""]
   }
 
 };
