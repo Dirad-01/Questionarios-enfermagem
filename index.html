@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anotação de enfermagem</title>
+    <title>Anotação de Enfermagem</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Melhor renderização em navegadores modernos -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
+
 <body>
 
 <div class="layout">
 
-    <div class="sidebar">
-        <h2>Modelos</h2>
-        <div id="modelList"></div>
-    </div>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="sidebar-title">Modelos</h2>
+        <div id="modelList" class="model-list"></div>
+    </aside>
 
-    <div class="content-area">
-        <h2 id="titleArea">Selecione um Modelo</h2>
+    <!-- ÁREA PRINCIPAL -->
+    <main class="content-area">
+        <h2 id="titleArea" class="content-title">Selecione um Modelo</h2>
+
+        <!-- Caixa dinâmica de texto e inputs -->
         <div id="textArea" class="textBox hidden"></div>
-        <button id="copyBtn" class="copyBtn hidden" onclick="copyText()">Copiar Texto</button>
-    </div>
+
+        <!-- Botão de copiar -->
+        <button id="copyBtn" class="copyBtn hidden" onclick="copyText()">
+            Copiar Texto
+        </button>
+    </main>
 
 </div>
 
+<!-- RODAPÉ -->
 <footer class="footer">
-    Victor Duarte © 2025
+    <span>Victor Duarte © 2025</span>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-
