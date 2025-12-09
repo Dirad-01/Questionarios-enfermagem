@@ -127,9 +127,10 @@ body {
   color: #444;
   white-space: pre-wrap;
   transition: 0.25s ease;
+  position: relative;
 }
 
-/* Borda dinâmica da caixa ao focar qualquer input dentro */
+/* Borda dinâmica */
 .textBox:focus-within {
   border-color: var(--primary);
   box-shadow:
@@ -137,7 +138,7 @@ body {
     0 6px 18px rgba(0,0,0,0.18);
 }
 
-/* ======= INPUTS INLINE (PREMIUM) ======= */
+/* ====== INPUTS INLINE ====== */
 .textBox .fillField {
   display: inline-block;
   padding: 6px 8px;
@@ -149,9 +150,6 @@ body {
   background: #faf9f6;
   color: #333;
   transition: 0.18s ease;
-
-  /* FIX: permite que a suggestBox fique sempre alinhada */
-  position: relative;
 }
 
 .textBox .fillField[type="number"] {
@@ -159,63 +157,70 @@ body {
   text-align: center;
 }
 
-/* Foco Premium */
 .textBox .fillField:focus {
   border-color: var(--primary);
   background: #fffdfa;
   outline: none;
-
   box-shadow:
     0 0 0 2px rgba(124, 90, 46, 0.25),
     0 4px 12px rgba(0,0,0,0.12);
-
-  animation: fieldPulse 0.25s ease-out;
 }
 
-@keyframes fieldPulse {
-  0% { box-shadow: 0 0 0 0 rgba(124, 90, 46, 0); }
-  100% { box-shadow: 0 0 0 2px rgba(124, 90, 46, 0.25); }
+/* ======================================================
+   ORGANIZAÇÃO MAIS BONITA DOS INSUMOS (2 COLUNAS)
+   ====================================================== */
+
+.textBox br {
+  line-height: 0;
 }
 
-.textBox span {
-  padding: 3px 6px;
-  background: #f3e7d4;
-  border-radius: 6px;
-  color: var(--primary-dark);
-  font-weight: 600;
+.textBox strong {
+  display: block;
+  margin-top: 14px;
 }
 
-/* ====== SUGESTÕES (ALINHADAS PERFEITAS) ====== */
+.textBox p {
+  margin-bottom: 6px;
+}
+
+/* transforma os itens em uma grid */
+.textBox .item-insumo {
+  display: grid;
+  grid-template-columns: auto 150px auto 100px;
+  align-items: center;
+  gap: 6px 12px;
+  margin-bottom: 8px;
+}
+
+/* deixa “Matérias descartáveis utilizados” separado */
+.textBox .grupo-insumos {
+  margin-top: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid #e9e4d8;
+  border-bottom: 1px solid #e9e4d8;
+}
+
+/* SUGESTÕES */
 .suggestBox {
   position: absolute;
-  left: 0;
-  top: calc(100% + 6px);
-
-  width: 100%;            /* <- AGORA A LARGURA É IGUAL AO INPUT */
-  max-width: 100%;        /* <- nunca ultrapassa */
   background: #ffffff;
   border-radius: 12px;
   border: 1px solid #d5d0c3;
   padding: 6px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.15);
-
   z-index: 9999;
   animation: fadeDown 0.18s ease;
-
-  overflow: hidden;       /* <- impede de escapar para fora */
-}
+  overflow: hidden;
 }
 
-/* Animação suave ao abrir */
+/* Animação */
 @keyframes fadeDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-6px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 .suggestItem {
@@ -228,13 +233,12 @@ body {
   transition: 0.18s ease;
 }
 
-.suggestItem:hover,
-.suggestItem.highlight {
+.suggestItem:hover {
   background: #efe5cc;
   color: #5a3e1c;
 }
 
-/* ====== BOTÃO DE COPIAR ====== */
+/* BOTÃO DE COPIAR */
 .copyBtn {
   align-self: flex-start;
   margin-top: 10px;
@@ -245,9 +249,7 @@ body {
   color: white;
   font-size: 16px;
   cursor: pointer;
-  letter-spacing: 0.3px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.22);
-  transition: 0.22s ease;
 }
 
 .copyBtn:hover {
@@ -255,34 +257,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ==== BANNER DE "COPIADO" (PREMIUM ANIMADO) ==== */
-.copyBanner {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  padding: 16px 26px;
-  border-radius: 14px;
-  font-weight: 600;
-  color: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.32);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: bannerShow 0.55s ease forwards;
-}
-
-@keyframes bannerShow {
-  0% { opacity: 0; transform: translateY(14px); }
-  60% { opacity: 1; transform: translateY(-4px); }
-  100% { opacity: 1; transform: translateY(0px); }
-}
-
-/* ==== OCULTO ==== */
-.hidden {
-  display: none;
-}
-
-/* ==== FOOTER ==== */
+/* FOOTER */
 .footer {
   width: 100%;
   text-align: center;
@@ -294,7 +269,7 @@ body {
   margin-top: 25px;
 }
 
-/* ======== RESPONSIVIDADE ======== */
+/* RESPONSIVIDADE */
 @media (max-width: 900px) {
   .layout {
     flex-direction: column;
