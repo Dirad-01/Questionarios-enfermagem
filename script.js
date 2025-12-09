@@ -18,7 +18,12 @@ const opcoes = {
   Esparadrapo: ["comum", "antialérgico"],
   Luva: ["P", "M","Estéreo"],
   administrado: ["1", "2","3","4"],
-
+  Equipo: ["Macro gotas", "Micro gotas"],
+  bacteriano: ["Adulto", "Pediátrico"],
+  Extensor: ["20", "40","60"],
+  soro: ["100ML", "250ML","500ML"],
+  mascara: ["2", "2,5","3","3,5","4"],
+  cateter: ["18", "20","22","24"],
 };
 
 // =====================================================
@@ -43,8 +48,8 @@ Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "Calibre", "TipoTCRM", "number","administrado",
-			"","data","Esparadrapo","number","Seringa","number","Agulha",
-			"number","","number","Luva","number","","number",""]
+             "","data","Esparadrapo","number","Seringa","number","Agulha",
+             "number","","number","Luva","number","","number",""]
   },
 
   tomog: {
@@ -64,8 +69,8 @@ Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
-			"Esparadrapo","number","Seringa","number","Agulha","number",
-			"","number","Luva","number","","number",""	]
+             "Esparadrapo","number","Seringa","number","Agulha","number",
+             "","number","Luva","number","","number","" ]
   },
 
   contrasteInterno: {
@@ -85,8 +90,8 @@ Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
-			"Esparadrapo","number","Seringa","number","Agulha","number",
-			"","number","Luva","number","","number",""	]
+             "Esparadrapo","number","Seringa","number","Agulha","number",
+             "","number","Luva","number","","number","" ]
   },
 
   dacrio: {
@@ -130,8 +135,8 @@ Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "TipoTCRM", "number",
-			"administrado","","data","Esparadrapo","number",
-			"Seringa","number","Agulha","number","","number","Luva","number","","number",""]
+             "administrado","","data","Esparadrapo","number",
+             "Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
 
   extravasamentoExterno: {
@@ -155,9 +160,9 @@ Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "Calibre", "TipoTCRM", "number",
-			"administrado", "","data","","Realizados","Esparadrapo",
-			"number","Seringa","number","Agulha","number","","number",
-			"Luva","number","","number",""]
+             "administrado", "","data","","Realizados","Esparadrapo",
+             "number","Seringa","number","Agulha","number","","number",
+             "Luva","number","","number",""]
   },
 
   extravasamentoInterno: {
@@ -180,8 +185,8 @@ Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number", "administrado",
-			"","data","Referindo","Realizados","Esparadrapo","number",
-			"Seringa","number","Agulha","number","","number","Luva","number","","number",""]
+             "","data","Referindo","Realizados","Esparadrapo","number",
+             "Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
 
   sedacao: {
@@ -198,9 +203,22 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Oxigênio:  _____
+Equipo:  _____, quantidade: _____
+Eletrodo:  _____Unidade
+Látex para oxigênio:  _____ Unidade
+Filtro bacteriano:  _____
+Extensor:  _____, quantidade: _____
+Válvula antirefluxo:  _____ Unidade
+Soro fisiológico:  _____, quantidade: _____
+Mascara laríngea:  _____, quantidade: _____
+Cateter periférico:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
+
 `,
-    campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
+    campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number",
+             "tempo","Equipo","number","number","number","bacteriano","Extensor","number","number","soro",
+             "number","mascara","number","cateter","number","","number",""]
   },
 
   semContrasteExterno: {
@@ -219,100 +237,102 @@ Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
   },
-
-  // =====================================================
-  // NOVOS MODELOS
-  // =====================================================
-
-  pelveContraste: {
+    pelveContraste: {
     titulo: "RM Pelve com Contraste",
     texto: `
 Realizo protocolo de identificação do paciente conforme protocolo institucional, com checagem da pulseira e conferência de dados de segurança. Oriento sobre o exame, esclarecendo dúvidas e aplicando os questionários de triagem preconizados.
-Verifiado os sinais vitais, devidamente anotados em prontuário. Realizei punção venosa periférica com cateter calibre _____, em membro _____ , obtendo sucesso na _____tentativa. 
+Verificados os sinais vitais, devidamente anotados em prontuário. Realizei punção venosa periférica com cateter calibre _____, em membro _____, obtendo sucesso na _____ tentativa.
 Foi realizado teste de permeabilidade com 10 mL de soro fisiológico, acesso pérvio e sem sinais de intercorrências.
-Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _____ mL de soro via vaginal e _____ mL de soro via retal, sem queixas. Em seguida, administrei o Brometo de Escopolamina (Buscopan) conforme prescrição médica, através do acesso venoso, sem eventos adversos.
-Realizada administração do contraste _____ em BIC, _____ frasco, lote _____, validade _____  com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição médica, sem sinais de extravasamento ou reações adversas. Procedimento ocorreu normalmente, sem intercorrências.
-Exame finalizado. Paciente retirado da sala em boas condições clínicas, com sinais vitais estáveis, orientado quanto aos cuidados pós-exame e liberado para domicílio.
+Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _____ mL de soro via vaginal e _____ mL de soro via retal, sem queixas.
+Em seguida administrei Buscopan conforme prescrição médica, através do acesso venoso.
+Realizada administração do contraste _____ em BIC, _____ frasco, lote _____, validade _____, com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição.
+Exame finalizado sem intercorrências. Paciente orientado e liberado em boas condições clínicas.
 
-Matérias descartáveis utilizados: 
+Matérias descartáveis utilizados:
 
 Esparadrapo: _____, quantidade: _____
-Seringa: _____, quantidade: _____ 
+Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["Calibre","membro","number","TipoTCRM","number","TipoTCRM",
-			"number","","data","Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
+			"number","","data","Esparadrapo","number","Seringa","number",
+			"Agulha","number","","number","Luva","number","","number",""]
   },
 
   colonoVirtual: {
     titulo: "Tomografia de Colono Virtual",
     texto: `
-Paciente admitido no setor para realização de tomografia de colono virtual. Realizada identificação correta conforme protocolo institucional, com conferência dos dados e pulseira de identificação. Procedi às orientações referentes ao exame, esclarecendo dúvidas e reforçando as etapas do procedimento.
-Foram verificados os sinais vitais, devidamente registrados em prontuário. Em seguida, o paciente foi posicionado conforme protocolo para o exame.
-Realizei aplicação de xilocaína gel, seguida da introdução de sonda retal nº 16, com boa aceitação e sem queixas importantes. Durante todo o preparo, o paciente recebeu orientações sobre o procedimento e etapas subsequentes. Procedimento sendo conduzido pelo médico.
-Exame realizado com sucesso, sem intercorrências. Paciente permaneceu estável, sendo orientado após o término e liberado por conduta médica em boas condições gerais.
+Paciente admitido no setor para realização de tomografia de colono virtual. Realizada identificação conforme protocolo institucional. Orientado quanto ao exame e etapas.
+Realizei aplicação de xilocaína gel, seguida da introdução de sonda retal nº 16, com boa aceitação. Procedimento conduzido pelo médico responsável.
+Exame realizado com sucesso, sem intercorrências. Paciente orientado e liberado posteriormente.
 
-Matérias descartáveis utilizados: 
+Matérias descartáveis utilizados:
 
 Esparadrapo: _____, quantidade: _____
-Seringa: _____, quantidade: _____ 
+Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
-    campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
+    campos: [
+      "Esparadrapo","number","Seringa","number","Agulha","number",
+      "","number","Luva","number","","number",""
+    ]
   },
 
   entero: {
     titulo: "Entero RM / Entero Tomo",
     texto: `
-Paciente admitido no setor para realização de Enterografia. Realizada identificação correta conforme protocolo, com conferência dos dados de identificação e pulseira do paciente. Verifico sinais vitais.
-Iniciei o preparo do exame conforme prescrição médica: preparei a solução com laxante osmótico, utilizando _____ saches/doses diluídos em 1 litro de água mineral. Procedi às orientações ao paciente quanto à ingestão da solução, reforçando volume, ritmo e etapas conforme prescrição médica.
-Paciente realizou a ingestão da solução conforme orientado, sem queixas e sem intercorrências. Após tempo adequado, o paciente foi encaminhado e posicionado para o exame seguindo o protocolo institucional.
-Exame realizado com sucesso, sem eventos adversos. Paciente manteve-se estável, orientado após o procedimento e liberado com sinais vitais estáveis.
+Paciente admitido para realização de Enterografia. Identificação conferida conforme protocolo institucional. Verifico sinais vitais.
+Preparo iniciado conforme prescrição: solução com laxante osmótico utilizando _____ sachês/doses diluídos em 1 litro de água. Paciente orientado quanto à ingestão e realizou sem queixas.
+Após tempo adequado, paciente encaminhado para exame e posicionado conforme protocolo.
+Exame concluído sem eventos adversos. Paciente estável e orientado após o procedimento.
 
-Matérias descartáveis utilizados: 
+Matérias descartáveis utilizados:
 
 Esparadrapo: _____, quantidade: _____
-Seringa: _____, quantidade: _____ 
+Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
-    campos: ["number","Esparadrapo","number","Seringa","number",
-			"Agulha","number","","number","Luva","number","","number",""]
+    campos: [
+      "number","Esparadrapo","number","Seringa","number","Agulha",
+      "number","","number","Luva","number","","number",""
+    ]
   },
 
   Biopsiasedacao: {
-    titulo: "Biopsia com Sedação / Interno e externo",
+    titulo: "Biópsia com Sedação / Interno e Externo",
     texto: `
-Paciente admitido na sala de tomografia para realização de biópsia guiada por tomografia, conforme prescrição médica. Realizada conferência de identidade com pulseira de identificação e checagem dos dados no sistema, garantindo o cumprimento do protocolo de segurança do paciente (protocolo de identificação segura).
-Realizada triagem pré-anestésica, avaliação de jejum, alergias e uso de medicamentos conforme rotina institucional. Monitorização contínua instalada (PA não invasiva, FC, FR, SpO₂ ). Equipamentos de suporte e emergência conferidos e disponíveis na sala (ressuscitador manual, fonte de O₂, aspirador, e fármacos de emergência). Material de procedimento  de biópsia conferidos e montados de forma asséptica.
-Paciente posicionado conforme orientação médica, respeitando princípios de segurança e conforto. Realizo punção venosa periférica cateter _____ , realizado teste de permeabilidade com 10ml de SF 0,9%, apto para uso. 
-Anestesia conduzida pelo anestesiologista conforme protocolo institucional, mantendo paciente sob vigilância contínua da equipe de enfermagem e anestesia durante todo o procedimento, com monitorização por monitor multiparamétrico. O procedimento foi realizado sem intercorrências clínicas.
-Ao término, efetuada compressão local e curativo estéril oclusivo, conforme técnica asséptica. Monitorização mantida até completa recuperação anestésica. Sinais vitais estáveis, paciente consciente, orientado, eupneico e em ar ambiente.
-Foram reforçadas orientações pós-procedimento quanto a cuidados com o curativo, sinais de alerta (dispneia, dor torácica, sangramento, febre) e importância do repouso conforme prescrição médica.
-Paciente encaminhado em _____ , em companhia _____ , para _____ , sem intercorrências durante o trajeto.
+Paciente admitido para biópsia guiada por tomografia. Identificação conferida conforme protocolo institucional. Triagem pré-anestésica realizada. Monitorização instalada.
+Punção venosa periférica com cateter _____, teste de permeabilidade com 10 mL de SF 0,9% realizado.
+Anestesia conduzida pelo anestesiologista, monitorização contínua pela enfermagem. Procedimento realizado sem intercorrências.
+Curativo estéril aplicado ao término. Monitorização até recuperação anestésica. Paciente orientado e encaminhado em _____, acompanhado por _____, para _____.
 
-Matérias descartáveis utilizados: 
+Matérias descartáveis utilizados:
 
 Esparadrapo: _____, quantidade: _____
-Seringa: _____, quantidade: _____ 
+Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
-    campos: ["Calibre", "encaminhado", "acompanhado", "para",
-			"Esparadrapo","number","Seringa","number","Agulha",
-			"number","","number","Luva","number","","number",""]
+    campos: [
+      "Calibre","encaminhado","acompanhado","para",
+      "Esparadrapo","number","Seringa","number","Agulha","number",
+      "","number","Luva","number","","number",""
+    ]
   }
 
+
+  // Se tiver mais modelos, podem ser mantidos aqui...
 };
 
 // =====================================================
@@ -367,17 +387,14 @@ function abrirModelo(key) {
       // ==========================
       if (tipo === "number") {
         input.type = "number";
-
       } else if (tipo === "data") {
         input.type = "date";
-
       } else if (opcoes[tipo]) {
         input.type = "text";
         input.dataset.key = tipo;
         input.addEventListener("focus", () => mostrarSugestoes(input, true));
         input.addEventListener("input", () => mostrarSugestoes(input));
         input.addEventListener("keydown", navegarSugestoes);
-
       } else {
         input.type = "text";
       }
@@ -394,7 +411,7 @@ function abrirModelo(key) {
 }
 
 // =====================================================
-// AUTOCOMPLETE
+// AUTOCOMPLETE — POSICIONAMENTO AJUSTADO
 // =====================================================
 
 function mostrarSugestoes(input, mostrarTudo = false) {
@@ -421,19 +438,26 @@ function mostrarSugestoes(input, mostrarTudo = false) {
     box.appendChild(item);
   });
 
-  const rect = input.getBoundingClientRect();
-box.style.left = rect.left + "px";
-box.style.top = rect.bottom + "px";
-box.style.width = rect.width + "px";
+  // Posiciona a caixa de sugestões relativa ao input
+  const parent = input.parentElement;
+  const offsetTop = input.offsetTop + input.offsetHeight;
+  box.style.position = "absolute";
+  box.style.left = input.offsetLeft + "px";
+  box.style.top = offsetTop + "px";
+  box.style.width = input.offsetWidth + "px";
+  box.style.zIndex = 9999;
 
-
+  parent.appendChild(box);
   input._box = box;
-  document.body.appendChild(box);
 }
 
 function removerSugestoes() {
   document.querySelectorAll(".suggestBox").forEach(e => e.remove());
 }
+
+// =====================================================
+// NAVEGAÇÃO DE TECLADO NAS SUGESTÕES
+// =====================================================
 
 function navegarSugestoes(e) {
   const box = this._box;
@@ -455,11 +479,15 @@ function navegarSugestoes(e) {
   }
 
   items.forEach(i => i.classList.remove("highlight"));
-  if (idx >= 0) items[idx].classList.add("highlight");
+  if (idx >= 0) {
+    items[idx].classList.add("highlight");
+  }
 }
 
 document.addEventListener("click", e => {
-  if (!e.target.classList.contains("fillField")) removerSugestoes();
+  if (!e.target.classList.contains("fillField")) {
+    removerSugestoes();
+  }
 });
 
 // =====================================================
@@ -532,4 +560,3 @@ async function copyText() {
     setTimeout(() => banner.remove(), 2000);
   }, faltando ? 300 : 0);
 }
-
