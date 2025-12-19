@@ -301,10 +301,8 @@ Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
-    campos: [
-      "number","Esparadrapo","number","Seringa","number","Agulha",
-      "number","","number","Luva","number","","number",""
-    ]
+    campos: ["number","Esparadrapo","number","Seringa","number","Agulha",
+      "number","","number","Luva","number","","number",""]
   },
 
   Biopsiasedacao: {
@@ -329,7 +327,78 @@ Outros:  _____, quantidade: _____
       "Esparadrapo","number","Seringa","number","Agulha","number",
       "","number","Luva","number","","number",""
     ]
-  }
+  },
+   Novomodelo1: {
+    titulo: "Novo modelo 1",
+    texto: `
+Em construição...
+
+Matérias descartáveis utilizados:
+
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
+`,
+    campos: ["Esparadrapo","number","Seringa","number",
+			"Agulha","number","","number","Luva","number","","number",""]
+  },
+  
+   Novomodelo2: {
+    titulo: "Novo modelo 2",
+    texto: `
+Em construição...
+
+Matérias descartáveis utilizados:
+
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
+`,
+    campos: ["Esparadrapo","number","Seringa","number",
+			"Agulha","number","","number","Luva","number","","number",""]
+	
+	
+  },
+   Novomodelo3: {
+    titulo: "Novo modelo 3",
+    texto: `
+Em construição...
+
+Matérias descartáveis utilizados:
+
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
+`,
+    campos: ["Esparadrapo","number","Seringa","number",
+			"Agulha","number","","number","Luva","number","","number",""]
+	
+  },
+   Novomodelo4: {
+    titulo: "Novo modelo 4",
+    texto: `
+
+Matérias descartáveis utilizados:
+
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Outros:  _____, quantidade: _____
+`,
+    campos: ["Esparadrapo","number","Seringa","number",
+			"Agulha","number","","number","Luva","number","","number",""]
+  },
 
 
   // Se tiver mais modelos, podem ser mantidos aqui...
