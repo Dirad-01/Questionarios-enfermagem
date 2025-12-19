@@ -45,6 +45,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "Calibre", "TipoTCRM", "number","administrado",
@@ -66,6 +67,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
@@ -87,6 +89,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
@@ -132,6 +135,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "TipoTCRM", "number",
@@ -157,6 +161,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "Calibre", "TipoTCRM", "number",
@@ -182,6 +187,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number", "administrado",
@@ -213,6 +219,7 @@ Válvula antirefluxo:  _____ Unidade
 Soro fisiológico:  _____, quantidade: _____
 Mascara laríngea:  _____, quantidade: _____
 Cateter periférico:  _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 
 `,
@@ -233,6 +240,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
@@ -255,6 +263,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["Calibre","membro","number","TipoTCRM","number","TipoTCRM",
@@ -276,6 +285,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: [
@@ -299,6 +309,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["number","Esparadrapo","number","Seringa","number","Agulha",
@@ -320,6 +331,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: [
@@ -340,6 +352,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number",
@@ -358,6 +371,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number",
@@ -377,6 +391,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number",
@@ -394,6 +409,7 @@ Seringa: _____, quantidade: _____
 Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number",
