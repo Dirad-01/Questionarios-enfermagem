@@ -3,11 +3,11 @@
 // =====================================================
 
 const opcoes = {
-  membro: ["MID", "MIE","MSD","MSE"],
-  TipoTCRM: ["Henetix", "Dotarem", "Outro"],
-  Coronaria: ["Henetix"],
-  Referindo: ["Henetix", "Outro"],
-  ExameCoronaria: ["Henetix", "Outro"],
+  membro: ["MID", "MIE", "MSD", "MSE"],
+  TipoTCRM: ["Henetix 350", "Dotarem", "Outro"],
+  Coronaria: ["Henetix 350"],
+  Referindo: ["Henetix 350", "Outro"],
+  ExameCoronaria: ["Henetix 350", "Outro"],
   Realizados: ["Scout, elevação do membro", "Outro"],
   Calibre: ["18", "20", "22", "24"], 
   encaminhado: ["deambulando", "maca"], 
@@ -645,3 +645,4 @@ async function copyText() {
     setTimeout(() => banner.remove(), 2000);
   }, faltando ? 300 : 0);
 }
+
