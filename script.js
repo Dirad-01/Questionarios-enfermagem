@@ -340,10 +340,20 @@ Outros:  _____, quantidade: _____
       "","number","Luva","number","","number",""
     ]
   },
-   Novomodelo1: {
-    titulo: "Novo modelo 1",
+   TRANSFERENCIA: {
+    titulo: "CONDIÇÕES PARA A TRANSFERÊNCIA",
     texto: `
-Em construição...
+Paciente em uso de algum dispositivo? Sim ( ) Não ( )
+Qual: _____ Calibre: _____ Membro: _____ Data do acesso: _____
+Paciente respirando em ambiente? Sim ( ) Não ( )
+Dispositivo: BVM ( ) Máscara Venturi ( ) Máscara de Hudson ( ) Outros ( )
+Paciente realizou algum tipo de preparo? Sim ( ) Não ( )
+Medicamento? _____
+Droga: _____ Via de administração: _____ Vol/h: _____
+SSVV: PA: _____ x _____ mmHg FC: _____ bpm FR: _____ irpm T: _____ °C SpO2: _____ % Dor: _____
+Condições clínicas relacionadas ao paciente? Sim ( ) Não ( )
+Reação anafilática ( ) Extravasamento de contraste ( ) Risco de injúria renal ( ) Queda ( )
+EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
 
 Matérias descartáveis utilizados:
 
