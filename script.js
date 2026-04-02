@@ -21,6 +21,7 @@ const opcoes = {
   Equipo: ["Macro gotas", "Micro gotas"],
   bacteriano: ["Adulto", "Pediátrico"],
   Extensor: ["20", "40","60"],
+	simnao: ["Sim", "Não"],
   soro: ["100ML", "250ML","500ML"],
   mascara: ["2", "2,5","3","3,5","4"],
   cateter: ["18", "20","22","24"],
@@ -340,14 +341,14 @@ Outros:  _____, quantidade: _____
       "","number","Luva","number","","number",""
     ]
   },
-   TRANSFERENCIA: {
-    titulo: "CONDIÇÕES PARA A TRANSFERÊNCIA",
+   Transferencia: {
+    titulo: "Transferencia de Paciente interno em outra instituição",
     texto: `
-Paciente em uso de algum dispositivo? Sim ( ) Não ( )
+Paciente em uso de algum dispositivo? _____
 Qual: _____ Calibre: _____ Membro: _____ Data do acesso: _____
-Paciente respirando em ambiente? Sim ( ) Não ( )
-Dispositivo: BVM ( ) Máscara Venturi ( ) Máscara de Hudson ( ) Outros ( )
-Paciente realizou algum tipo de preparo? Sim ( ) Não ( )
+Paciente respirando em ambiente? _____
+Dispositivo: _____ BVM ( ) Máscara Venturi ( ) Máscara de Hudson ( ) Outros ( )
+Paciente realizou algum tipo de preparo? _____ Sim ( ) Não ( )
 Medicamento? _____
 Droga: _____ Via de administração: _____ Vol/h: _____
 SSVV: PA: _____ x _____ mmHg FC: _____ bpm FR: _____ irpm T: _____ °C SpO2: _____ % Dor: _____
@@ -365,7 +366,8 @@ Luva:    _____, quantidade: _____
 Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
-    campos: ["Esparadrapo","number","Seringa","number",
+    campos: ["simnao","","","","","","","","","","","","","","","","","","",
+			 "Esparadrapo","number","Seringa","number",
 			"Agulha","number","","number","Luva","number","","number",""]
   },
   
