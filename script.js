@@ -20,6 +20,7 @@ const opcoes = {
   administrado: ["1", "2","3","4"],
   Equipo: ["Macro gotas", "Micro gotas"],
   bacteriano: ["Adulto", "Pediátrico"],
+	Dispositivo: ["BVM", "Máscara Venturi","Máscara de Hudson","Outros"],	
   Extensor: ["20", "40","60"],
 	simnao: ["Sim", "Não"],
   soro: ["100ML", "250ML","500ML"],
@@ -347,12 +348,12 @@ Outros:  _____, quantidade: _____
 Paciente em uso de algum dispositivo? _____
 Qual: _____ Calibre: _____ Membro: _____ Data do acesso: _____
 Paciente respirando em ambiente? _____
-Dispositivo: _____ BVM ( ) Máscara Venturi ( ) Máscara de Hudson ( ) Outros ( )
-Paciente realizou algum tipo de preparo? _____ Sim ( ) Não ( )
+Dispositivo: _____ 
+Paciente realizou algum tipo de preparo? _____ 
 Medicamento? _____
 Droga: _____ Via de administração: _____ Vol/h: _____
 SSVV: PA: _____ x _____ mmHg FC: _____ bpm FR: _____ irpm T: _____ °C SpO2: _____ % Dor: _____
-Condições clínicas relacionadas ao paciente? Sim ( ) Não ( )
+Condições clínicas relacionadas ao paciente? _____ 
 Reação anafilática ( ) Extravasamento de contraste ( ) Risco de injúria renal ( ) Queda ( )
 EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
 
@@ -366,7 +367,7 @@ Luva:    _____, quantidade: _____
 Seringa salinizada:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
-    campos: ["simnao","","","","","","","","","","","","","","","","","","",
+    campos: ["simnao","","","","","","Dispositivo","simnao","","","","","","","","","","","","simnao",
 			 "Esparadrapo","number","Seringa","number",
 			"Agulha","number","","number","Luva","number","","number",""]
   },
