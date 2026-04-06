@@ -359,7 +359,7 @@ EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
 
 
 `,
-    campos: ["simnao","","","","","","Dispositivo","simnao","","","","","",
+    campos: ["simnao","","","membro","data","simnao","Dispositivo","simnao","","","","","",
 			 "","","","","","","simnao"
 			 ]
   },
