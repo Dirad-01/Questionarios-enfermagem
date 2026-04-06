@@ -349,10 +349,8 @@ Outros:  _____, quantidade: _____
     ]
   },
    Transferencia: {
-    titulo: "Transferencia de Paciente interno em outra instituição",
+    titulo: "Recebimento e transferencia de Paciente interno em outra instituição",
     texto: `
-	
-CONDIÇÕES PARA A TRANSFERÊNCIA
 
 Paciente em uso de algum dispositivo? _____
 Qual: _____ Calibre: _____ Membro: _____ Data do acesso: _____
@@ -363,7 +361,6 @@ Medicamento? _____
 Droga: _____ Via de administração: _____ Vol/h: _____
 SSVV: PA: _____ x _____ mmHg FC: _____ bpm FR: _____ irpm T: _____°C SpO2: _____ % Dor: _____
 
-INDICAÇÃO DA TRANSFERÊNCIA
 
 Condições clínicas relacionadas ao paciente? _____
 Reação anafilática (_____) Extravasamento de contraste (_____) 
@@ -371,11 +368,22 @@ Risco de injúria renal (_____) Queda ( _____ )
 EAP (_____) Sangramento intenso (_____) Pneumotórax (_____) 
 Outros (_____) Qual: _____
 
+Matérias descartáveis utilizados:
+
+Esparadrapo: _____, quantidade: _____
+Seringa: _____, quantidade: _____
+Agulha:  _____, quantidade: _____
+Gase:    _____, quantidade: _____
+Luva:    _____, quantidade: _____
+Seringa salinizada:  _____, quantidade: _____
+Outros:  _____, quantidade: ____
 
 
 `,
     campos: ["simnao","acessov","","membro","data","simnao","Dispositivo","simnao","","","","","",
-			 "","","","","","","simnao","simnao","simnao","simnao","simnao","simnao","simnao","simnao",""
+			 "","","","","","","simnao","simnao","simnao","simnao","simnao","simnao",
+			 "simnao","simnao","","","Esparadrapo","number","Seringa","number",
+			"Agulha","number","","number","Luva","number","","number",""
 			 ]
   },
    Novomodelo2: {
