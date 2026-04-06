@@ -376,7 +376,7 @@ Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Seringa salinizada:  _____, quantidade: _____
-Outros:  _____, quantidade: ____
+Outros:  _____, quantidade: _____
 
 
 `,
