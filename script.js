@@ -345,29 +345,9 @@ Outros:  _____, quantidade: _____
    Transferencia: {
     titulo: "Transferencia de Paciente interno em outra instituição",
     texto: `
-Paciente em uso de algum dispositivo? _____
-Qual: _____ Calibre: _____ Membro: _____ Data do acesso: _____
-Paciente respirando em ambiente? _____
-Dispositivo: _____ 
-Paciente realizou algum tipo de preparo? _____ 
-Medicamento? _____
-Droga: _____ Via de administração: _____ Vol/h: _____
-SSVV: PA: _____ x _____ mmHg FC: _____ bpm FR: _____ irpm T: _____ °C SpO2: _____ % Dor: _____
-Condições clínicas relacionadas ao paciente? _____ 
-Reação anafilática ( ) Extravasamento de contraste ( ) Risco de injúria renal ( ) Queda ( )
-EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
-
-
-`,
-    campos: ["simnao","","","membro","data","simnao","Dispositivo","simnao","","","","","",
-			 "","","","","","","simnao"
-			 ]
-  },
-   Novomodelo2: {
-    titulo: "Transferencia de Paciente interno em outra instituição",
-    texto: `
 	
 CONDIÇÕES PARA A TRANSFERÊNCIA
+
 Paciente em uso de algum dispositivo? _____
 Qual: _____ Calibre: _____ Membro: _____ Data do acesso: _____
 Paciente respirando em ambiente? _____
@@ -387,7 +367,18 @@ EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
 
 `,
     campos: ["simnao","","","membro","data","simnao","Dispositivo","simnao","","","","","",
-			 "","","","","","","simnao"]
+			 "","","","","","","simnao"
+			 ]
+  },
+   Novomodelo2: {
+    titulo: "Novomodelo2",
+    texto: `
+	
+EM ANDAMENTO...
+
+
+`,
+    campos: [""]
   },
    Novomodelo3: {
     titulo: "Novo modelo 3",
