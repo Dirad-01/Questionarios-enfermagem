@@ -71,6 +71,7 @@ Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Seringa salinizada:  _____, quantidade: _____
+Swab:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
@@ -93,6 +94,7 @@ Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Seringa salinizada:  _____, quantidade: _____
+Swab:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["membro", "Calibre", "TipoTCRM", "number","administrado","","data",
@@ -165,7 +167,6 @@ Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Seringa salinizada:  _____, quantidade: _____
-Swab:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["number", "membro", "Calibre", "TipoTCRM", "number",
@@ -245,7 +246,6 @@ Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Seringa salinizada:  _____, quantidade: _____
-Swab:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: ["Esparadrapo","number","Seringa","number","Agulha","number","","number","Luva","number","","number",""]
@@ -338,7 +338,6 @@ Agulha:  _____, quantidade: _____
 Gase:    _____, quantidade: _____
 Luva:    _____, quantidade: _____
 Seringa salinizada:  _____, quantidade: _____
-Swab:  _____, quantidade: _____
 Outros:  _____, quantidade: _____
 `,
     campos: [
