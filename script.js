@@ -364,7 +364,7 @@ EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
 			 ]
   },
   
-   Transferencia de Paciente interno em outra instituição: {
+  : {
     titulo: "Transferencia de Paciente interno em outra instituição",
     texto: `
 CONDIÇÕES PARA A TRANSFERÊNCIA
