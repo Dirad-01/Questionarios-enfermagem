@@ -253,7 +253,7 @@ Outros:  _____, quantidade: _____
 Realizo protocolo de identificação do paciente conforme protocolo institucional, com checagem da pulseira e conferência de dados de segurança. Oriento sobre o exame, esclarecendo dúvidas e aplicando os questionários de triagem preconizados.
 Verificados os sinais vitais, devidamente anotados em prontuário. Realizei punção venosa periférica com cateter calibre _____, em membro _____, obtendo sucesso na _____ tentativa.
 Foi realizado teste de permeabilidade com 10 mL de soro fisiológico, acesso pérvio e sem sinais de intercorrências.
-Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _____ mL de soro via vaginal e _____ mL de soro via retal, sem queixas.
+Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _____ mL de lubrigel via vaginal e _____ mL de soro via retal, sem queixas.
 Em seguida administrei Buscopan conforme prescrição médica, através do acesso venoso.
 Realizada administração do contraste _____ em BIC, _____ frasco, lote _____, validade _____, com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição.
 Exame finalizado sem intercorrências. Paciente orientado e liberado em boas condições clínicas.
