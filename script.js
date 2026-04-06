@@ -364,21 +364,30 @@ EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
 			 ]
   },
    Novomodelo2: {
-    titulo: "Novo modelo 2",
+    titulo: "Transferencia de Paciente interno em outra instituição",
     texto: `
+	
+CONDIÇÕES PARA A TRANSFERÊNCIA
+Paciente em uso de algum dispositivo? _____
+Qual: _____ Calibre: _____ Membro: _____ Data do acesso: _____
+Paciente respirando em ambiente? _____
+Dispositivo: _____
+Paciente realizou algum tipo de preparo? _____
+Medicamento? _____
+Droga: _____ Via de administração: _____ Vol/h: _____
+SSVV: PA: _x_ mmHg FC: _____ bpm FR: _____ irpm T: _____°C SpO2: _____ % Dor: _____
 
-Matérias descartáveis utilizados:
+INDICAÇÃO DA TRANSFERÊNCIA
 
-Esparadrapo: _____, quantidade: _____
-Seringa: _____, quantidade: _____
-Agulha:  _____, quantidade: _____
-Gase:    _____, quantidade: _____
-Luva:    _____, quantidade: _____
-Seringa salinizada:  _____, quantidade: _____
-Outros:  _____, quantidade: _____
+Condições clínicas relacionadas ao paciente? _____
+Reação anafilática ( ) Extravasamento de contraste ( ) Risco de injúria renal ( ) Queda ( )
+EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
+
+
+
 `,
-    campos: ["Esparadrapo","number","Seringa","number",
-			"Agulha","number","","number","Luva","number","","number",""]
+    campos: ["simnao","","","membro","data","simnao","Dispositivo","simnao","","","","","",
+			 "","","","","","","simnao"]
   },
    Novomodelo3: {
     titulo: "Novo modelo 3",
