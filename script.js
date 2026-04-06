@@ -361,7 +361,7 @@ Dispositivo: _____
 Paciente realizou algum tipo de preparo? _____
 Medicamento? _____
 Droga: _____ Via de administração: _____ Vol/h: _____
-SSVV: PA: _x_ mmHg FC: _____ bpm FR: _____ irpm T: _____°C SpO2: _____ % Dor: _____
+SSVV: PA: _____ x _____ mmHg FC: _____ bpm FR: _____ irpm T: _____°C SpO2: _____ % Dor: _____
 
 INDICAÇÃO DA TRANSFERÊNCIA
 
