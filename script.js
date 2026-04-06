@@ -366,14 +366,16 @@ SSVV: PA: _____ x _____ mmHg FC: _____ bpm FR: _____ irpm T: _____°C SpO2: ____
 INDICAÇÃO DA TRANSFERÊNCIA
 
 Condições clínicas relacionadas ao paciente? _____
-Reação anafilática (_____) Extravasamento de contraste (_____) Risco de injúria renal (_____) Queda (_____)
-EAP (_____) Sangramento intenso (_____) Pneumotórax (_____) Outros (_____) Qual: _____
+Reação anafilática (_____) Extravasamento de contraste (_____) 
+Risco de injúria renal (_____) Queda ( _____ )
+EAP (_____) Sangramento intenso (_____) Pneumotórax (_____) 
+Outros (_____) Qual: _____
 
 
 
 `,
     campos: ["simnao","acessov","","membro","data","simnao","Dispositivo","simnao","","","","","",
-			 "","","","","","","simnao"
+			 "","","","","","","simnao","simnao","simnao","simnao","simnao","simnao","simnao","simnao",""
 			 ]
   },
    Novomodelo2: {
