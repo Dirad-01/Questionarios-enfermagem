@@ -25,7 +25,9 @@ const opcoes = {
 	simnao: ["Sim", "Não"],
   soro: ["100ML", "250ML","500ML"],
   mascara: ["2", "2,5","3","3,5","4"],
+	acessov: ["Acesso venoso central", "Acesso venoso periférico","Picc","Dissecção venosa",""],
   cateter: ["18", "20","22","24"],
+	
 };
 
 // =====================================================
@@ -364,13 +366,13 @@ SSVV: PA: _x_ mmHg FC: _____ bpm FR: _____ irpm T: _____°C SpO2: _____ % Dor: _
 INDICAÇÃO DA TRANSFERÊNCIA
 
 Condições clínicas relacionadas ao paciente? _____
-Reação anafilática ( ) Extravasamento de contraste ( ) Risco de injúria renal ( ) Queda ( )
-EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
+Reação anafilática (_____) Extravasamento de contraste (_____) Risco de injúria renal (_____) Queda (_____)
+EAP (_____) Sangramento intenso (_____) Pneumotórax (_____) Outros (_____) Qual: _____
 
 
 
 `,
-    campos: ["simnao","","","membro","data","simnao","Dispositivo","simnao","","","","","",
+    campos: ["simnao","acessov","","membro","data","simnao","Dispositivo","simnao","","","","","",
 			 "","","","","","","simnao"
 			 ]
   },
