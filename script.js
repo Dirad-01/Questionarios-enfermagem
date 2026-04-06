@@ -357,19 +357,11 @@ Condições clínicas relacionadas ao paciente? _____
 Reação anafilática ( ) Extravasamento de contraste ( ) Risco de injúria renal ( ) Queda ( )
 EAP ( ) Sangramento intenso ( ) Pneumotórax ( ) Outros ( ) Qual: _____
 
-Matérias descartáveis utilizados:
 
-Esparadrapo: _____, quantidade: _____
-Seringa: _____, quantidade: _____
-Agulha:  _____, quantidade: _____
-Gase:    _____, quantidade: _____
-Luva:    _____, quantidade: _____
-Seringa salinizada:  _____, quantidade: _____
-Outros:  _____, quantidade: _____
 `,
-    campos: ["simnao","","","","","","Dispositivo","simnao","","","","","","","","","","","","simnao",
-			 "Esparadrapo","number","Seringa","number",
-			"Agulha","number","","number","Luva","number","","number",""]
+    campos: ["simnao","","","","","","Dispositivo","simnao","","","","","",
+			 "","","","","","","simnao"
+			 ]
   },
   
    Novomodelo2: {
