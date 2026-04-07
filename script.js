@@ -62,7 +62,7 @@ Outros:  _____, quantidade: _____
     titulo: "Contraste Emergencia",
     texto: `
 Paciente proveniente da emergência com punção no membro: _____ Calibre do cateter: _____ G, realizo teste de infusão pré exame, conforme protocolo. 
-Administrado Contraste via venosa: Tipo _____ volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica e válvula anti-refluxo, conforme protocolo, sem intercorrências.
+Administrado Contraste via venosa: Tipo _____ volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica, manyfill e válvula anti-refluxo, conforme protocolo, sem intercorrências.
 Encaminho paciente para setor de origem em cadeira de rodas, em ambiente, orientado, nega dor, acompanhado por familiares, enfermagem, oriento pós contraste.
 
 Matérias descartáveis utilizados: 
@@ -85,7 +85,7 @@ Outros:  _____, quantidade: _____
     titulo: "Contraste Interno",
     texto: `
 Recebo paciente com acesso venoso prévio. Membro puncionado: _____. Calibre do cateter: _____ G. Realizo teste de infusão pré exame conforme protocolo.
-Administrado contraste via venosa: Tipo _____,volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica e válvula anti-refluxo, sem intercorrências.
+Administrado contraste via venosa: Tipo _____,volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica, manyfill e válvula anti-refluxo, sem intercorrências.
 Paciente encaminhado ao setor de origem em ar ambiente, orientado, nega dor, acompanhado por familiares. Orientações pós contraste fornecidas.
 
 Matérias descartáveis utilizados: 
@@ -132,7 +132,7 @@ Realizada orientação prévia quanto ao procedimento, posicionamento e necessid
 Realizo punção de acesso venoso periférico na _____ tentativa, membro puncionado: _____. Calibre do cateter: 18G. Teste de infusão realizado conforme protocolo.
 Sinais vitais monitorizados antes e após o exame, estáveis. Medicação administrada conforme prescrição.
 Acesso com bom fluxo, utilizado para infusão do meio iodado: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____ 
-em BIC, com 2 seringas angiografica e válvula anti-refluxo, sem intercorrências.
+em BIC, com 2 seringas angiografica, manyfill e válvula anti-refluxo, sem intercorrências.
 Paciente colaborativo, tolerou bem o procedimento, encaminhado em cadeira de rodas, orientado, sinais vitais normais.
 
 Matérias descartáveis utilizados: 
@@ -263,7 +263,7 @@ Foi realizado teste de permeabilidade com 10 mL de soro fisiológico, acesso pé
 Paciente posicionado em sala de exame conforme padrão para RM de pelve. 
 Iniciei o preparo conforme protocolo institucional: administração de _____ mL de lubrigel via vaginal e _____ mL de soro via retal, sem queixas.
 Em seguida administrei Buscopan conforme prescrição médica, através do acesso venoso.
-Realizada administração do contraste _____ em BIC, _____ frasco, lote _____, validade _____, com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição.
+Realizada administração do contraste _____ em BIC, _____ frasco, lote _____, validade _____, com 2 seringas angiográficas, manyfill e válvula anti refluxo, conforme prescrição.
 Exame finalizado sem intercorrências. Paciente orientado e liberado em boas condições clínicas.
 
 Matérias descartáveis utilizados:
