@@ -157,7 +157,8 @@ Paciente externo realizou questionário e anamnese em anexo.
 Punção realizada na _____ tentativa, membro puncionado: _____. Calibre do cateter: _____ G. Teste de infusão pré exame conforme protocolo.
 Durante administração de contraste: Tipo _____, volume _____ administrado: _____ frasco, lote _____, validade _____, apresentou extravasamento.
 Realizado scalt, retirada imediata do acesso, compressa fria aplicada e elevação do membro.
-Paciente referindo _____. Cuidados realizados: _____. Encaminhado para avaliação médica ou vascular conforme protocolo.
+Paciente referindo _____. Cuidados realizados: _____.
+Encaminhado para avaliação médica ou vascular conforme protocolo.
 Conduta: compressa fria intermitente, vigilância do membro, orientar retorno se dor intensa, edema progressivo ou alteração de perfusão.
 Paciente orientado, compreensivo, evoluindo estável. Liberado para domicílio acompanhado. Notificação preenchida.
 
@@ -256,9 +257,11 @@ Outros:  _____, quantidade: _____
     titulo: "RM Pelve com Contraste",
     texto: `
 Realizo protocolo de identificação do paciente conforme protocolo institucional, com checagem da pulseira e conferência de dados de segurança. Oriento sobre o exame, esclarecendo dúvidas e aplicando os questionários de triagem preconizados.
-Verificados os sinais vitais, devidamente anotados em prontuário. Realizei punção venosa periférica com cateter calibre _____, em membro _____, obtendo sucesso na _____ tentativa.
+Verificados os sinais vitais, devidamente anotados em prontuário.
+Realizei punção venosa periférica com cateter calibre _____, em membro _____, obtendo sucesso na _____ tentativa.
 Foi realizado teste de permeabilidade com 10 mL de soro fisiológico, acesso pérvio e sem sinais de intercorrências.
-Paciente posicionado em sala de exame conforme padrão para RM de pelve. Iniciei o preparo conforme protocolo institucional: administração de _____ mL de lubrigel via vaginal e _____ mL de soro via retal, sem queixas.
+Paciente posicionado em sala de exame conforme padrão para RM de pelve. 
+Iniciei o preparo conforme protocolo institucional: administração de _____ mL de lubrigel via vaginal e _____ mL de soro via retal, sem queixas.
 Em seguida administrei Buscopan conforme prescrição médica, através do acesso venoso.
 Realizada administração do contraste _____ em BIC, _____ frasco, lote _____, validade _____, com 2 seringas angiográficas e válvula anti refluxo, conforme prescrição.
 Exame finalizado sem intercorrências. Paciente orientado e liberado em boas condições clínicas.
@@ -330,7 +333,8 @@ Outros:  _____, quantidade: _____
 Paciente admitido para biópsia guiada por tomografia. Identificação conferida conforme protocolo institucional. Triagem pré-anestésica realizada. Monitorização instalada.
 Punção venosa periférica com cateter _____, teste de permeabilidade com 10 mL de SF 0,9% realizado.
 Anestesia conduzida pelo anestesiologista, monitorização contínua pela enfermagem. Procedimento realizado sem intercorrências.
-Curativo estéril aplicado ao término. Monitorização até recuperação anestésica. Paciente orientado e encaminhado em _____, acompanhado por _____, para _____.
+Curativo estéril aplicado ao término. 
+Monitorização até recuperação anestésica. Paciente orientado e encaminhado em _____, acompanhado por _____, para _____.
 
 Matérias descartáveis utilizados:
 
