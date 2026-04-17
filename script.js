@@ -61,7 +61,7 @@ Outros:  _____, quantidade: _____
   tomog: {
     titulo: "Contraste Emergencia",
     texto: `
-Paciente proveniente da emergência com punção no membro: _____ Calibre do cateter: _____ G, realizo teste de infusão pré exame, conforme protocolo. 
+Admito paciente com punção no membro: _____ Calibre do cateter: _____ G, realizo teste de infusão pré exame, conforme protocolo. 
 Administrado Contraste via venosa: Tipo _____ volume _____ administrado: _____ frasco, lote _____, validade _____ em BIC, com 2 seringas angiografica, manyfill e válvula anti-refluxo, conforme protocolo, sem intercorrências.
 Encaminho paciente para setor de origem em cadeira de rodas, em ambiente, orientado, nega dor, acompanhado por familiares, enfermagem, oriento pós contraste.
 
@@ -118,7 +118,7 @@ Paciente posicionado conforme protocolo. Documentação anexada. Procedimento re
     titulo: "Exame Sem Contraste",
     texto: `
 Paciente externo vem para realizar exame sem contraste. Posicionado conforme protocolo, documentação anexada, procedimento realizado sem intercorrências.
-Paciente proveniente da emergência para exame sem contraste. Posicionado conforme protocolo, exame realizado sem intercorrências.
+Admitido paciente para exame sem contraste. Posicionado conforme protocolo, exame realizado sem intercorrências.
 Paciente interno vem para exame sem contraste. Posicionado conforme protocolo, exame realizado sem intercorrências.
 `,
     campos: []
