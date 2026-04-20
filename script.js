@@ -309,7 +309,8 @@ Outros:  _____, quantidade: _____
     titulo: "Entero RM / Entero Tomo",
     texto: `
 Paciente admitido para realização de Enterografia. Identificação conferida conforme protocolo institucional. Verifico sinais vitais.
-Preparo iniciado conforme prescrição: solução com laxante osmótico utilizando _____ sachês/doses diluídos em 1 litro de água. Paciente orientado quanto à ingestão e realizou sem queixas.
+Preparo iniciado conforme prescrição: solução com laxante osmótico utilizando _____ sachês/doses diluídos em 1 litro de água.
+Paciente orientado quanto à ingestão e realizou sem queixas.
 Após tempo adequado, paciente encaminhado para exame e posicionado conforme protocolo.
 Exame concluído sem eventos adversos. Paciente estável e orientado após o procedimento.
 
