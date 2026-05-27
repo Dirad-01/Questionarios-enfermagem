@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Anotação de Enfermagem</title>
+
     <link rel="stylesheet" href="style.css">
 
-    <!-- Melhor renderização em navegadores modernos -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 </head>
 
 <body>
@@ -16,30 +19,100 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-        <h2 class="sidebar-title">Modelos</h2>
+
+        <div class="sidebar-top">
+
+            <div class="logo-area">
+
+                <div class="logo-circle">
+                    V
+                </div>
+
+                <div class="logo-text">
+                    <h1>Enfermagem</h1>
+                    <span>Modelos Inteligentes</span>
+                </div>
+
+            </div>
+
+            <div class="search-area">
+                <input
+                    type="text"
+                    id="searchModel"
+                    placeholder="Pesquisar modelo..."
+                >
+            </div>
+
+        </div>
+
+        <h2 class="sidebar-title">
+            Modelos
+        </h2>
+
         <div id="modelList" class="model-list"></div>
+
     </aside>
 
-    <!-- ÁREA PRINCIPAL -->
+    <!-- CONTEÚDO -->
     <main class="content-area">
-        <h2 id="titleArea" class="content-title">Selecione um Modelo</h2>
 
-        <!-- Caixa dinâmica de texto e inputs -->
+        <!-- HEADER -->
+        <div class="topbar">
+
+            <div>
+                <h2 id="titleArea" class="content-title">
+                    Selecione um Modelo
+                </h2>
+
+                <p class="content-subtitle">
+                    Sistema inteligente de evolução
+                </p>
+            </div>
+
+            <div class="status-online">
+                Online
+            </div>
+
+        </div>
+
+        <!-- CARD BOAS VINDAS -->
+        <div class="welcomeCard" id="welcomeCard">
+
+            <div class="welcomeIcon">
+                🩺
+            </div>
+
+            <h3>
+                Sistema de Evoluções
+            </h3>
+
+            <p>
+                Selecione um modelo ao lado para iniciar.
+            </p>
+
+        </div>
+
+        <!-- TEXTO -->
         <div id="textArea" class="textBox hidden"></div>
 
-        <!-- Botão de copiar -->
-        <button id="copyBtn" class="copyBtn hidden" onclick="copyText()">
+        <!-- BOTÃO -->
+        <button
+            id="copyBtn"
+            class="copyBtn hidden"
+            onclick="copyText()"
+        >
             Copiar Texto
         </button>
+
     </main>
 
 </div>
 
-<!-- RODAPÉ -->
 <footer class="footer">
     <span>Victor Duarte © 2025</span>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
