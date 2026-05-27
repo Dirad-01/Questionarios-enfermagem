@@ -375,6 +375,8 @@ body{
   white-space:pre-wrap;
 
   position:relative;
+
+  overflow-wrap:break-word;
 }
 
 .textBox:focus-within{
@@ -386,27 +388,39 @@ body{
     0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* INPUTS */
+/* INPUTS AJUSTADOS */
 
 .fillField{
+
+  display:inline-block;
+
+  width:auto;
+
+  min-width:70px;
+
+  max-width:220px;
 
   background:#f9fafb;
 
   border:1px solid #d1d5db;
 
-  border-radius:12px;
+  border-radius:10px;
 
-  padding:10px 12px;
+  padding:7px 10px;
 
-  min-width:150px;
-
-  margin:2px;
+  margin:2px 3px;
 
   font-size:14px;
+
+  font-family:var(--font);
+
+  color:var(--text);
 
   transition:0.2s;
 
   outline:none;
+
+  vertical-align:middle;
 }
 
 .fillField:focus{
@@ -419,10 +433,55 @@ body{
     0 0 0 4px rgba(124,90,46,0.15);
 }
 
+/* CAMPOS MENORES */
+
 .fillField[type="number"]{
-  width:90px;
-  min-width:90px;
+  width:75px;
+  min-width:75px;
   text-align:center;
+}
+
+.fillField[type="date"]{
+  width:145px;
+  min-width:145px;
+}
+
+/* TAMANHOS AUTOMÁTICOS */
+
+.fillField[data-key="membro"],
+.fillField[data-key="Calibre"],
+.fillField[data-key="administrado"],
+.fillField[data-key="cateter"],
+.fillField[data-key="Extensor"],
+.fillField[data-key="mascara"]{
+  width:85px;
+  min-width:85px;
+}
+
+.fillField[data-key="TipoTCRM"],
+.fillField[data-key="Dispositivo"],
+.fillField[data-key="acessov"]{
+  width:190px;
+  min-width:190px;
+}
+
+.fillField[data-key="simnao"]{
+  width:80px;
+  min-width:80px;
+}
+
+.fillField[data-key="Esparadrapo"],
+.fillField[data-key="Equipo"],
+.fillField[data-key="bacteriano"]{
+  width:150px;
+  min-width:150px;
+}
+
+.fillField[data-key="Seringa"],
+.fillField[data-key="Agulha"],
+.fillField[data-key="Luva"]{
+  width:100px;
+  min-width:100px;
 }
 
 /* SUGESTÕES */
@@ -445,6 +504,10 @@ body{
   animation:fade .16s ease;
 
   z-index:9999;
+
+  max-height:240px;
+
+  overflow-y:auto;
 }
 
 @keyframes fade{
@@ -465,6 +528,8 @@ body{
   cursor:pointer;
 
   transition:0.15s;
+
+  font-size:14px;
 }
 
 .suggestItem:hover,
@@ -582,12 +647,20 @@ body{
   .textBox{
     padding:24px;
     font-size:15px;
+    line-height:1.8;
   }
 
   .fillField{
     width:100%;
     min-width:100%;
+    max-width:100%;
     margin-top:8px;
     margin-bottom:8px;
+  }
+
+  .fillField[type="number"],
+  .fillField[type="date"]{
+    width:100%;
+    min-width:100%;
   }
 }
