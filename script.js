@@ -672,3 +672,44 @@ async function copyText() {
   }, faltando ? 300 : 0);
 }
 
+// =====================================================
+// PESQUISA DE MODELOS
+// =====================================================
+
+const searchInput = document.getElementById("searchModel");
+
+searchInput?.addEventListener("input", function () {
+
+  const termo = this.value.toLowerCase();
+
+  document.querySelectorAll(".model-item").forEach(item => {
+
+    const texto = item.textContent.toLowerCase();
+
+    item.style.display =
+      texto.includes(termo)
+        ? "block"
+        : "none";
+  });
+});
+
+// =====================================================
+// REMOVE CARD AO ABRIR
+// =====================================================
+
+const abrirModeloOriginal = abrirModelo;
+
+abrirModelo = function(key){
+
+  document.getElementById("welcomeCard")
+    ?.classList.add("hidden");
+
+  abrirModeloOriginal(key);
+};
+
+// =====================================================
+// MELHORA DOS BANNERS
+// =====================================================
+
+const bannerOld = "#5d3f16";
+const avisoOld = "#8b6a2a";
