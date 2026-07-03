@@ -395,15 +395,20 @@ Outros:  _____, quantidade: _____
 			"Agulha","number","","number","Luva","number","","number",""
 			 ]
   },
-   Novomodelo2: {
-    titulo: "Novomodelo2",
+   Marta: {
+    titulo: "Marta",
     texto: `
 	
-EM ANDAMENTO...
+CONTRASTE DOTAREM: _____, quantidade: _____
+CONTRASTE HENETIX: _____, quantidade: _____
+GEL VAGINAL 20ML, quantidade: _____
+SORO FISIOLOGICO DE 100ML, quantidade: _____
+SORO FISIOLOGICO DE 250ML, quantidade: _____
+BUSCOPAN:  _____, quantidade: _____
 
 
 `,
-    campos: [""]
+    campos: ["","number","","number","number","number","number","","number"]
   },
    Novomodelo3: {
     titulo: "Novo modelo 3",
