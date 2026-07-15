@@ -396,7 +396,7 @@ Outros:  _____, quantidade: _____
 			 ]
   },
    Marta1: {
-    titulo: "Marta modelo",
+    titulo: "MODELOS PRONTOS",
     texto: `
 	
 CONTRASTE DOTAREM: _____, quantidade: _____
